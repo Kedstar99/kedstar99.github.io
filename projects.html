@@ -1,475 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
-  <meta name="theme-color" content="#212529" />
-  <title>Krish De Souza - About</title>
-
-  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
-
-  <!-- CSS  -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CMaterial+Icons">
-  <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
-    integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="card.css">
-</head>
-
-<body>
-
-  <nav class="navbar navbar-expand navbar-dark bg-dark">
-    <div class="container">
-      <div class="navbar-collapse collapse order-1 order-md-0 mx-auto" id="navbarSupportedContent1">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/Blog">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/">About</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Projects</a>
-          </li>
-        </ul>
-      </div>
-      <div class="order-3 order-md-0 mr-auto">
-        <div class="nav navbar-nav ml-auto">
-          <a class="nav-item nav-link" href="https://github.com/Kedstar99"><i class="fab fa-github fa-lg"></i></a>
-          <a class="nav-item nav-link" href="https://www.linkedin.com/in/krish-de-souza-2008a2147/"><i class="fab fa-linkedin fa-lg"></i></a>
-        </div>
-      </div>
-      <button class="navbar-toggler toggler-example" type="button" data-toggle="col-12 col-md-6 mt-5lapse" data-target="#navbarSupportedContent1"
-        aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
-            class="fa fa-bars fa-1x"></i></span></button>
-    </div>
-  </nav>
-  <div class="project-header mt-3 mx-auto">
-    <div class="container">
-      <h1>Current Projects and Contributions</h1>
-      <p>
-        This year, one of my major goals has been to build a larger set of open source contributions. In this venture I
-        have
-        been rather successful as this year as I have managed to make multiple minor contributions to major projects in
-        2018.
-        This includes the following contributions.
-      </p>
-      <div id="accordion" class="my-3">
-
-        <div class="card">
-          <div class="card-header" id="headingOne">
-            <h5 class="mb-0">
-              Fixed multiple shell issues/bugs in Valve's Proton software. [<a href="https://github.com/ValveSoftware/Proton/pull/1931">PR1931</a>,
-              <a href="https://github.com/ValveSoftware/Proton/pull/675">PR675</a>]
-              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false"
-                aria-controls="collapseOne">
-                <i class="fas fa-caret-down"></i>
-              </button>
-            </h5>
-          </div>
-          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-            <div class="card-body">
-              Proton is a brand new mechanism introduced by Valve to enable Windows games to run on non-Windows
-              platforms. It works by integrating
-              various technologies such as WINE and DXVK. These tools translate Windows System calls and DirectX calls
-              to those which are Linux compatibles.
-              As a result of their use, these technologies have vastly expanded the number of games that are playable
-              on Linux.
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-header" id="headingTwo">
-            <h5 class="mb-0">
-              Fixed update checking in VSCode for snap users. [<a href="https://github.com/Microsoft/vscode/pull/63716">PR63716</a>]
-              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
-                aria-controls="collapseTwo">
-                <i class="fas fa-caret-down"></i>
-              </button>
-            </h5>
-          </div>
-          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-            <div class="card-body">
-              VSCode is an editor provided by Microsoft and based on Electron. It offers IDE like features
-              across a variety of languages that aid in programming development.
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-header" id="headingThree">
-            <h5 class="mb-0">
-              Enabled better ISO C compliance and build mechanisms for the project CKB-next. [<a href="https://github.com/ckb-next/ckb-next/pull/206">PR206</a>,
-              <a href="https://github.com/ckb-next/ckb-next/pull/221">PR221</a>,
-              <a href="https://github.com/ckb-next/ckb-next/pull/228">PR228</a>]
-              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
-                aria-controls="collapseThree">
-                <i class="fas fa-caret-down"></i>
-              </button>
-            </h5>
-          </div>
-          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-            <div class="card-body">
-              CKB-next is an open source driver that enables RGB and communication for Corsair keyboard products on
-              Linux platforms.
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-header" id="headingFour">
-            <h5 class="mb-0">
-              Aided with packaging Thunderbird snaps for Ubuntu platforms via <a href="https://launchpad.net/thunderbird">snaps</a>.
-              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
-                aria-controls="collapseFour">
-                <i class="fas fa-caret-down"></i>
-              </button>
-            </h5>
-          </div>
-          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-            <div class="card-body">
-              Thunderbird is an open source email and calendar based application developmed by the Mozilla Foundation.
-              It is based on similar technologies to Mozilla Firefox.
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-header" id="headingFive">
-            <h5 class="mb-0">
-              Aided with packaging vlc snaps for better snap compliance. [<a href="https://github.com/videolan/vlc/pull/75">PR75</a>]
-              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false"
-                aria-controls="collapseFive">
-                <i class="fas fa-caret-down"></i>
-              </button>
-            </h5>
-          </div>
-          <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
-            <div class="card-body">
-              VLC is an open source media program that enables the playback of video and audio.
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-header" id="headingSix">
-            <h5 class="mb-0">
-              Enabled snap theme support for the Adapta-GTK theme for snap packages. <br>
-              <a href="https://snapcraft.io/adapta-gtk-snap">
-                <img alt="Get it from the Snap Store" src="https://snapcraft.io/static/images/badges/en/snap-store-white.svg" />
-              </a>
-              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false"
-                aria-controls="collapseSix">
-                <i class="fas fa-caret-down"></i>
-              </button>
-            </h5>
-          </div>
-          <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
-            <div class="card-body">
-              Adapta-GTK is a theme created by Tista-500. It is designed to recreate Google's material design for
-              Linux.
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <p>
-        Through the above experiences, I have gained experience in contributing to a wide-variety of
-        packages. This includes learning to follow through with feature requests from email and permissioning to
-        implementation. In addition, I have learnt and applied a wide variety of skills that have proved useful for
-        contributing. This includes the
-        following.
-        <ul>
-          <li> Successfully utilised Docker to aid in building and packaging a wide variety projects.</li>
-          <li> Learned new tricks across various version control platforms including Git, Mercurial and Bazaar. I also
-            learned how to sign my requests and publish them on Launchpad.</li>
-          <li> Discovered various linting utilities including clippy (Rust), Pylint and Shellcheck. These have been
-            useful for finding potential problematic areas in open code.</li>
-          <li> Learned how to provide meaningful commit messages, and etiquette for pull requests.</li>
-        </ul>
-        In addition, this year I successfully completed Hacktoberfest. In doing so, contributed to a large variety of
-        Rust projects. This was a valuable experience in experiencing commercial Rust development.
-      </p>
-      <div class="row">
-        <div class="col-1"></div>
-        <div class="col-9">
-          <div class="text-center">
-            <img src="hacktoberfest.webp" class="img-fluid mx-auto d-block align-self-center" alt="hacktoberfest picture">
-          </div>
-        </div>
-        <div class="col-1"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="project-header mt-3 mx-auto">
-    <div class="container">
-      <h1>Academic Projects</h1>
-      <p>These projects were completed during my time studying at Imperial. Unfortunately, some of the projects are not
-        freely available as source as some of the projects are still used as courseworks.</p>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-6 mt-5">
-          <div class="card g-100">
-            <img class="card-img-top" src="thesis.webp" alt="PowerKap thesis image">
-            <div class="card-content">
-              <span class="card-title">
-                <h5>PowerKap</h5><i class="show fa fa-ellipsis-v fa-lg float-right"></i>
-              </span>
-              <p class="card-text">
-                This was my final-year Masters project/thesis that explores the power profiling capabilities and
-                behaviours on Linux.
-                <br>
-                <br>
-                A copy of my thesis can be found <a href="https://www.imperial.ac.uk/media/imperial-college/faculty-of-engineering/computing/public/1617-ug-projects/Krish-De-Souza---PowerKap;-A-tool-for-Improving-Energy-Transparency-for-Software-Developers-on-GNU.Linux-(x86)-platforms.pdf">here.</a>
-                <br>
-                My project code can also be found <a href="https://github.com/Kedstar99/PowerKap">here.</a>
-              </p>
-            </div>
-            <div class="card-reveal">
-              <span class="card-title">
-                <h5>PowerKap</h5>
-              </span>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-              <p>Energy awareness for a specific program can be a difficult aspect to measure. This element is becoming
-                increasingly important in an increasingly energy conscious world. Such a problem can currently be
-                difficult
-                to measure accurately quantify mainly because of the large amount of asynchronous and synchronous
-                aspects that make up an Operating System. With advanced schedulers, it is difficult to isolate exactly
-                how much energy can be attributed to a specific program. This is manly through the use of various
-                techniques
-                that buffer and consolidate data across different programs. As such, isolating the energy consumption
-                of a specific
-                program over it's execution can be difficult.
-                <br>
-                <br>
-                This project explores some of the current techniques that are available to profile energy consumption
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"><meta name="theme-color" content="#212529"><link rel="apple-touch-icon" sizes="57x57" href="/images/apple-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="/images/apple-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="/images/apple-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="/images/apple-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="/images/apple-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="/images/apple-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="/images/apple-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="/images/apple-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-icon-180x180.png"><link rel="icon" type="image/png" sizes="192x192" href="/images/android-icon-192x192.png"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png"><link rel="manifest" href="/images/manifest.json"><meta name="msapplication-TileColor" content="#ffffff"><meta name="msapplication-TileImage" content="/ms-icon-144x144.png"><meta name="theme-color" content="#ffffff"><!-- CSS--><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CMaterial+Icons"><link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"><link rel="stylesheet" href="card.css"><title>Krish De Souza - Projects</title></head><body><nav class="navbar navbar-expand navbar-dark bg-dark"><div class="container"><div class="navbar-collapse collapse order-1 order-md-0 mx-auto" id="navbarSupportedContent1"><ul class="navbar-nav mr-auto"><li class="nav-item"><a class="nav-link" href="#">Blog</a></li><li class="nav-item"><a class="nav-link" href="/">About</a></li><li class="nav-item active"><a class="nav-link" href="/projects">Projects</a></li></ul></div><div class="order-3 order-md-0 mr-auto"><div class="nav navbar-nav ml-auto"><a class="nav-item nav-link" href="https://github.com/Kedstar99"><i class="fab fa-github fa-lg"></i></a><a class="nav-item nav-link" href="https://www.linkedin.com/in/krish-de-souza-2008a2147/"><i class="fab fa-linkedin fa-lg"></i></a></div></div><button class="navbar-toggler toggler-example" type="button" data-toggle="col-12 col-md-6 mt-5lapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i class="fa fa-bars fa-1x"></i></span></button></div></nav><div class="project-header mt-3 mx-auto"><div class="container"><h1>Current Projects and Contributions</h1><p>This year, one of my major goals has been to build a larger set of open source contributions. In this venture I
+have
+been rather successful as this year as I have managed to make multiple minor contributions to major projects in
+2018.
+This includes the following contributions.</p><div class="my-3" id="accordion"><div class="card"><div class="card-header" id="headingOne"><h5 class="mb-0">Fixed multiple shell issues/bugs in Valve's Proton software. [<a href="https://github.com/ValveSoftware/Proton/pull/1931">PR1931</a>,<a href="https://github.com/ValveSoftware/Proton/pull/675">PR675</a>]<button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"><i class="fas fa-caret-down"></i></button></h5></div><div class="collapse show" id="collapseOne" aria-labelledby="headingOne" data-parent="#accordion"><div class="card-body">Proton is a brand new mechanism introduced by Valve to enable Windows games to run on non-Windows
+platforms. It works by integrating
+various technologies such as WINE and DXVK. These tools translate Windows System calls and DirectX calls
+to those which are Linux compatibles.
+As a result of their use, these technologies have vastly expanded the number of games that are playable
+on Linux.</div></div></div><div class="card"><div class="card-header" id="headingTwo"><h5 class="mb-0">Fixed update checking in VSCode for snap users. [<a href="https://github.com/Microsoft/vscode/pull/63716">PR63716</a>]<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><i class="fas fa-caret-down"></i></button></h5></div><div class="collapse" id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordion"><div class="card-body">VSCode is an editor provided by Microsoft and based on Electron. It offers IDE like features
+across a variety of languages that aid in programming development.</div></div></div><div class="card"><div class="card-header" id="headingThree"><h5 class="mb-0">Enabled better ISO C compliance and build mechanisms for the project CKB-next. [<a href="https://github.com/ckb-next/ckb-next/pull/206">PR206</a>,<a href="https://github.com/ckb-next/ckb-next/pull/221">PR221</a>,<a href="https://github.com/ckb-next/ckb-next/pull/228">PR228</a>]<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><i class="fas fa-caret-down"></i></button></h5></div><div class="collapse" id="collapseThree" aria-labelledby="headingThree" data-parent="#accordion"><div class="card-body">CKB-next is an open source driver that enables RGB and communication for Corsair keyboard products on
+Linux platforms.</div></div></div><div class="card"><div class="card-header" id="headingFour"><h5 class="mb-0">Aided with packaging Thunderbird snaps for Ubuntu platforms via <a href="https://launchpad.net/thunderbird">snaps</a>.<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"><i class="fas fa-caret-down"></i></button></h5></div><div class="collapse" id="collapseFour" aria-labelledby="headingFour" data-parent="#accordion"><div class="card-body">Thunderbird is an open source email and calendar based application developmed by the Mozilla Foundation.
+It is based on similar technologies to Mozilla Firefox.</div></div></div><div class="card"><div class="card-header" id="headingFive"><h5 class="mb-0">Aided with packaging vlc snaps for better snap compliance. [<a href="https://github.com/videolan/vlc/pull/75">PR75</a>]<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"><i class="fas fa-caret-down"></i></button></h5></div><div class="collapse" id="collapseFive" aria-labelledby="headingFive" data-parent="#accordion"><div class="card-body">VLC is an open source media program that enables the playback of video and audio.</div></div></div><div class="card"><div class="card-header" id="headingSix"><h5 class="mb-0">Enabled snap theme support for the Adapta-GTK theme for snap packages. <br><a href="https://snapcraft.io/adapta-gtk-snap"><img alt="Get it from the Snap Store" src="https://snapcraft.io/static/images/badges/en/snap-store-white.svg"></a><button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix"><i class="fas fa-caret-down"></i></button></h5></div><div class="collapse" id="collapseSix" aria-labelledby="headingSix" data-parent="#accordion"><div class="card-body">Adapta-GTK is a theme created by Tista-500. It is designed to recreate Google's material design for
+Linux.</div></div></div></div><p>Through the above experiences, I have gained experience in contributing to a wide-variety of
+packages. This includes learning to follow through with feature requests from email and permissioning to
+implementation. In addition, I have learnt and applied a wide variety of skills that have proved useful for
+contributing. This includes the
+following.</p><ul><li>Successfully utilised Docker to aid in building and packaging a wide variety projects.</li><li>Learned new tricks across various version control platforms including Git, Mercurial and Bazaar. I also
+learned how to sign my requests and publish them on Launchpad.</li><li>Discovered various linting utilities including clippy (Rust), Pylint and Shellcheck. These have been
+useful for finding potential problematic areas in open code.</li><li>Learned how to provide meaningful commit messages, and etiquette for pull requests.</li></ul>        In addition, this year I successfully completed Hacktoberfest. In doing so, contributed to a large variety of
+        Rust projects. This was a valuable experience in experiencing commercial Rust development.<p></p><div class="row"><div class="col-1"></div><div class="col-9"><div class="text-center"><img class="img-fluid mx-auto d-block align-self-center" src="/images/hacktoberfest.webp" alt="hacktoberfest picture"></div></div><div class="col-1"></div></div></div></div><div class="project-header mt-3 mx-auto"><div class="container"><h1>Academic Projects</h1><p>These projects were completed during my time studying at Imperial. Unfortunately, some of the projects are not
+freely available as source as some of the projects are still used as courseworks.</p></div><div class="container"><div class="row"><div class="col-12 col-md-6 mt-5"><div class="card g-100"><img class="card-img-top" src="/images/thesis.webp" alt="PowerKap thesis image"><div class="card-content"><span class="card-title"><h5>PowerKap</h5><i class="show fa fa-ellipsis-v fa-lg float-right"></i></span><p class="card-text">This was my final-year Masters project/thesis that explores the power profiling capabilities and
+behaviours on Linux.<br><br>                A copy of my thesis can be found <a href="https://www.imperial.ac.uk/media/imperial-college/faculty-of-engineering/computing/public/1617-ug-projects/Krish-De-Souza---PowerKap;-A-tool-for-Improving-Energy-Transparency-for-Software-Developers-on-GNU.Linux-(x86)-platforms.pdf">here.</a><br>                My project code can also be found <a href="https://github.com/Kedstar99/PowerKap">here.</a></p></div><div class="card-reveal"><span class="card-title"><h5>PowerKap</h5></span><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button><p>Energy awareness for a specific program can be a difficult aspect to measure. This element is becoming
+increasingly important in an increasingly energy conscious world. Such a problem can currently be
+difficult
+to measure accurately quantify mainly because of the large amount of asynchronous and synchronous
+aspects that make up an Operating System. With advanced schedulers, it is difficult to isolate exactly
+how much energy can be attributed to a specific program. This is manly through the use of various
+techniques
+that buffer and consolidate data across different programs. As such, isolating the energy consumption
+of a specific
+program over it's execution can be difficult.<br><br>                This project explores some of the current techniques that are available to profile energy consumption
                 of programs.
                 Within this project, I created a technique to profile the energy consumed by the CPU, RAM, GPU, battery
                 and network
                 components of a given program. This was subsequently tested across a wide range of benchmarks and
                 energy efficient/inefficient
-                programs that explore the effectiveness of my designed program.
-                <br>
-                <br>
-                I perform this comparison against a large amount of schedulers, governers and hardware along with
+                programs that explore the effectiveness of my designed program.<br><br>                I perform this comparison against a large amount of schedulers, governers and hardware along with
                 general program comparisons between
-                Firefox and Chrome. Further details of my program can seen in my <a href="https://www.imperial.ac.uk/media/imperial-college/faculty-of-engineering/computing/public/1617-ug-projects/Krish-De-Souza---PowerKap;-A-tool-for-Improving-Energy-Transparency-for-Software-Developers-on-GNU.Linux-(x86)-platforms.pdf">thesis.</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 mt-5">
-          <div class="card g-100">
-            <img class="card-img-top" src="sharify.webp" alt="Sharify image">
-            <div class="card-content">
-              <span class="card-title">
-                <h5>Sharify</h5>
-                <i class="show fa fa-ellipsis-v fa-lg float-right"></i>
-              </span>
-              <p class="card-text">
-                An AirBnB style app designed to fascilitate the sharing of common household items.
-              </p>
-            </div>
-            <div class="card-reveal">
-              <span class="card-title">
-                <h5>Sharify</h5>
-              </span>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-              A supervisor at Imperial tasked us with creating a platform for the lending and borrowing of items. The
+                Firefox and Chrome. Further details of my program can seen in my <a href="https://www.imperial.ac.uk/media/imperial-college/faculty-of-engineering/computing/public/1617-ug-projects/Krish-De-Souza---PowerKap;-A-tool-for-Improving-Energy-Transparency-for-Software-Developers-on-GNU.Linux-(x86)-platforms.pdf">thesis.</a></p></div></div></div><div class="col-12 col-md-6 mt-5"><div class="card g-100"><img class="card-img-top" src="/images/sharify.webp" alt="Sharify image"><div class="card-content"><span class="card-title"><h5>Sharify</h5><i class="show fa fa-ellipsis-v fa-lg float-right"></i></span><p class="card-text">An AirBnB style app designed to fascilitate the sharing of common household items.</p></div><div class="card-reveal"><span class="card-title"><h5>Sharify</h5></span><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>              A supervisor at Imperial tasked us with creating a platform for the lending and borrowing of items. The
               key idea was that the items aren't being used by their owner all the time, and so could be lent out to
               others who need them. Sharify was created to bring about the closeness that neighbours in smaller towns
-              could have, where they would simply go next door to borrow something they needed.
-              <br>
-              <br>
-              Sharify was developed across three platforms: a website, an Android app and an iOS app. These were
+              could have, where they would simply go next door to borrow something they needed.<br><br>              Sharify was developed across three platforms: a website, an Android app and an iOS app. These were
               serviced by a backend that handled the users, items and transactions. For this project, I was jointly
               responsible for the web-app for the site.
               For this site, I helped develop routes using NodeJS + Express and MongoDB. I was also responsible for
               setting up authentication and developing a test framework using Supertest and MochaJS. Finally, I helped
               design
-              the client side iteractions using twitter bootstrap and JQuery.
-              <br>
-              <br>
-              An example prototype video for the site can be found <a href="https://www.youtube.com/watch?v=IKpMxZB25MM">here</a>.
-              Source code and reports are available on request.
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12 col-md-6 mt-5">
-          <div class="card g-100">
-            <img class="card-img-top" src="wikimaster.webp" alt="WikiMaster Image">
-            <div class="card-content">
-              <span class="card-title">
-                <h5>Wikimaster, A Wikipedia-based quiz game</h5>
-                <i class="show fa fa-ellipsis-v fa-lg float-right"></i>
-              </span>
-              <p class="card-text">
-                WikiMaster is a quiz app using questions that are automatically generated from Wikipedia articles.
-                This app was unique in being capable of offering quizzes on any topic in the world.
-              </p>
-            </div>
-            <div class="card-reveal">
-              <span class="card-title">
-                <h5>Wikimaster, A Wikipedia-based quiz game</h5>
-              </span>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-              <p>
-                WikiMaster is a quiz app using questions that are automatically generated from Wikipedia articles.
-                In this way, the app could quiz a user on almost any topic in the world, which we feel would be rather
-                unique.
-                <br>
-                <br>
-                In many ways, this project layed the foundation for our architecture and project flow that proved
+              the client side iteractions using twitter bootstrap and JQuery.<br><br>              An example prototype video for the site can be found <a href="https://www.youtube.com/watch?v=IKpMxZB25MM">here</a>.
+              Source code and reports are available on request.</div></div></div></div><div class="row"><div class="col-12 col-md-6 mt-5"><div class="card g-100"><img class="card-img-top" src="/images/wikimaster.webp" alt="WikiMaster Image"><div class="card-content"><span class="card-title"><h5>Wikimaster, A Wikipedia-based quiz game</h5><i class="show fa fa-ellipsis-v fa-lg float-right"></i></span><p class="card-text">WikiMaster is a quiz app using questions that are automatically generated from Wikipedia articles.
+This app was unique in being capable of offering quizzes on any topic in the world.</p></div><div class="card-reveal"><span class="card-title"><h5>Wikimaster, A Wikipedia-based quiz game</h5></span><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button><p>WikiMaster is a quiz app using questions that are automatically generated from Wikipedia articles.
+In this way, the app could quiz a user on almost any topic in the world, which we feel would be rather
+unique.<br><br>                In many ways, this project layed the foundation for our architecture and project flow that proved
                 successful
                 for future projects. For this project, I worked with others on the backend which was written using
                 NodeJS + express.
-                I also helped build the website using Bootstrap and JQuery along with design the database interactions.
-                <br>
-                <br>
-                This project was chosen to be demonstrated for the department's open day.
-                Source code is available for this project on request.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 mt-5">
-          <div class="card g-100">
-            <img class="card-img-top" src="pintos.webp" alt="Pintos image">
-            <div class="card-content">
-              <span class="card-title">
-                <h5>Pintos</h5>
-                <i class="show fa fa-ellipsis-v fa-lg float-right"></i>
-              </span>
-              <p class="card-text">
-                Operating System Coursework
-                <br>
-                <br>
-                A copy of the specification can be found <a href="https://www.doc.ic.ac.uk/~mjw03/OSLab/pintos.pdf">here</a>.
-              </p>
-            </div>
-            <div class="card-reveal">
-              <span class="card-title">
-                <h5>Pintos</h5>
-              </span>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-              <p>
-                This was a group project to implement Pintos under the specification listed previously. For this
-                project, we needed to
-                implement many aspects that are critical for Operating System designs. This includes a expansive
-                virtual memory system that
-                expands to multiple pages, user programs, scheduling alogirthms including priority donation and
-                multi-level-feedback-queues.
-                This was a full x86 Operating System that was designed to be run on QEMU.
-                <br>
-                <br>
-                This project tested time management, C99 skills and skills managing concurrent access.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12 col-md-6 mt-5">
-          <div class="card g-100">
-            <img class="card-img-top" src="wacc.webp" alt="WACC image">
-            <div class="card-content">
-              <span class="card-title">
-                <h5>WACC</h5>
-                <i class="show fa fa-ellipsis-v fa-lg float-right"></i>
-              </span>
-              <p class="card-text">
-                The WACC coursework was a custom language coursework designed to test the fundamental basics of
-                compiler design.
-                It was designed to convert a custom statically typed TOY language to ARM7 assembly. This project
-                was written in Java.
-              </p>
-            </div>
-            <div class="card-reveal">
-              <span class="card-title">
-                <h5>WACC</h5>
-              </span>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-              <p>
-                This was a group project to implement WACC. This project was split up into multiple stages based on
-                syntax, semantic
-                and code generation.<br> <br>
-                For implementing this code, we used ANTLR4 for parsing. This provided a useful tree structure that was
+                I also helped build the website using Bootstrap and JQuery along with design the database interactions.<br><br>                This project was chosen to be demonstrated for the department's open day.
+                Source code is available for this project on request.</p></div></div></div><div class="col-12 col-md-6 mt-5"><div class="card g-100"><img class="card-img-top" src="/images/pintos.webp" alt="Pintos image"><div class="card-content"><span class="card-title"><h5>Pintos</h5><i class="show fa fa-ellipsis-v fa-lg float-right"></i></span><p class="card-text">Operating System Coursework<br><br>                A copy of the specification can be found <a href="https://www.doc.ic.ac.uk/~mjw03/OSLab/pintos.pdf">here</a>.</p></div><div class="card-reveal"><span class="card-title"><h5>Pintos</h5></span><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button><p>This was a group project to implement Pintos under the specification listed previously. For this
+project, we needed to
+implement many aspects that are critical for Operating System designs. This includes a expansive
+virtual memory system that
+expands to multiple pages, user programs, scheduling alogirthms including priority donation and
+multi-level-feedback-queues.
+This was a full x86 Operating System that was designed to be run on QEMU.<br><br>                This project tested time management, C99 skills and skills managing concurrent access.</p></div></div></div></div><div class="row"><div class="col-12 col-md-6 mt-5"><div class="card g-100"><img class="card-img-top" src="/images/wacc.webp" alt="WACC image"><div class="card-content"><span class="card-title"><h5>WACC</h5><i class="show fa fa-ellipsis-v fa-lg float-right"></i></span><p class="card-text">The WACC coursework was a custom language coursework designed to test the fundamental basics of
+compiler design.
+It was designed to convert a custom statically typed TOY language to ARM7 assembly. This project
+was written in Java.</p></div><div class="card-reveal"><span class="card-title"><h5>WACC</h5></span><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button><p>This was a group project to implement WACC. This project was split up into multiple stages based on
+syntax, semantic
+and code generation.<br><br>                For implementing this code, we used ANTLR4 for parsing. This provided a useful tree structure that was
                 useful for traversing
                 the code. Each of the three stages of syntax, semantic and code generation were implemented using this
                 tree. This is because the tree enabled the use of the visitor pattern which was an elegant approach to
-                only visiting the nodes that we care about.
-                <br>
-                <br>
-                As an extension to this project, we wrote a toy implementation of battleships that successfully ran on
-                QEMU.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 mt-5">
-          <div class="card g-100">
-            <img class="card-img-top" src="pi.webp" alt="Raspberry pi image">
-            <div class="card-content">
-              <span class="card-title">
-                <h5>Raspberry Pi project</h5>
-                <p class="card-text">
-                  As part of first year projects, we created a ARM assembler and emulator in C. This was subsequently
-                  used to write a custom
-                  assembly script that ran leds in a specific pattern in bare-metal assembly.
-                  <br>
-                  <br>
-                  A demonstration for this project can be found <a href="https://www.youtube.com/watch?v=cNdRP9X7RQE">here</a>.
-                </p>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Bootstrap core JavaScript
-  ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"></script>
-  <script src="card.js"></script>
-  <script>(function () {
-      var WebP = new Image(); WebP.onload = WebP.onerror = function () {
+                only visiting the nodes that we care about.<br><br>                As an extension to this project, we wrote a toy implementation of battleships that successfully ran on
+                QEMU.</p></div></div></div><div class="col-12 col-md-6 mt-5"><div class="card g-100"><img class="card-img-top" src="/images/pi.webp" alt="Raspberry pi image"><div class="card-content"><span class="card-title"><h5>Raspberry Pi project</h5><p class="card-text">As part of first year projects, we created a ARM assembler and emulator in C. This was subsequently
+used to write a custom
+assembly script that ran leds in a specific pattern in bare-metal assembly.<br><br>                  A demonstration for this project can be found <a href="https://www.youtube.com/watch?v=cNdRP9X7RQE">here</a>.</p></span></div></div></div></div></div></div><script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><script src="/js/card.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script><script>(function () {
+    var WebP = new Image(); WebP.onload = WebP.onerror = function () {
         if (WebP.height != 2) {
-          var sc = document.createElement('script'); sc.type = 'text/javascript'; sc.async = true;
-          var s = document.getElementsByTagName('script')[0]; sc.src = 'https://cdn.jsdelivr.net/npm/webpjs@0.0.2/webpjs.min.js'; s.parentNode.insertBefore(sc, s);
+            var sc = document.createElement('script'); sc.type = 'text/javascript'; sc.async = true;
+            var s = document.getElementsByTagName('script')[0]; sc.src = 'https://cdn.jsdelivr.net/npm/webpjs@0.0.2/webpjs.min.js'; s.parentNode.insertBefore(sc, s);
         }
-      };
-      WebP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
-    })();</script>
-</body>
-
-</html>
+    };
+    WebP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+})();</script></body></html>
