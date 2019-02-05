@@ -6,7 +6,7 @@ $(function(){
     });
     
     $('.card-reveal .close').on('click',function(){
-        var closest_reveal = $(this)[0].parentElement;
+        var closest_reveal = $(this)[0].parentElement.parentElement;
         $(closest_reveal).slideToggle('slow');
     });
 });

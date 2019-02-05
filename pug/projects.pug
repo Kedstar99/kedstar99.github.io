@@ -1,0 +1,330 @@
+doctype html
+html(lang='en')
+  head
+    include ./head.pug
+    link(rel='stylesheet', href='card.css')
+    title Krish De Souza - Projects
+  body
+    include ./navbar.pug
+    +navbar
+      li.nav-item
+        a.nav-link(href='#') Blog
+      li.nav-item
+        a.nav-link(href='/') About
+      li.nav-item.active
+        a.nav-link(href='#') Projects
+    .project-header.mt-3.mx-auto
+      .container
+        h1 Current Projects and Contributions
+        p
+          | This year, one of my major goals has been to build a larger set of open source contributions. In this venture I
+          | have been rather successful. This year I have managed to make multiple contributions to a variety of major projects.
+          | This includes the following contributions.
+        #accordion.my-3
+          .card
+            #headingOne.card-header
+              h5.mb-0
+                | Fixed multiple shell issues/bugs in Valve's Proton software. [
+                a(href='https://github.com/ValveSoftware/Proton/pull/1931') PR1931
+                | ,
+                a(href='https://github.com/ValveSoftware/Proton/pull/675') PR675
+                | ]
+                button.btn.btn-link(data-toggle='collapse', data-target='#collapseOne', aria-expanded='false', aria-controls='collapseOne')
+                  i.fas.fa-caret-down
+            #collapseOne.collapse.show(aria-labelledby='headingOne', data-parent='#accordion')
+              .card-body
+                | Proton is a brand new mechanism introduced by Valve to enable Windows games to run on non-Windows
+                | platforms. It works by integrating
+                | various technologies such as WINE and DXVK. These tools translate Windows System calls and DirectX calls
+                | to those which are Linux compatibles.
+                | As a result of their use, these technologies have vastly expanded the number of games that are playable
+                | on Linux.
+          .card
+            #headingTwo.card-header
+              h5.mb-0
+                | Fixed update checking in VSCode for snap users. [
+                a(href='https://github.com/Microsoft/vscode/pull/63716') PR63716
+                | ,
+                a(href='https://github.com/Microsoft/vscode/pull/64392') PR64392
+                |,
+                a(href='https://github.com/Microsoft/vscode/pull/65579') PR65579
+                | ]
+                button.btn.btn-link.collapsed(data-toggle='collapse', data-target='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+                  i.fas.fa-caret-down
+            #collapseTwo.collapse(aria-labelledby='headingTwo', data-parent='#accordion')
+              .card-body
+                | VSCode is an editor provided by Microsoft and based on Electron. It offers IDE like features
+                | across a variety of languages that aid in software development.
+          .card
+            #headingThree.card-header
+              h5.mb-0
+                | Enabled better ISO C compliance and build mechanisms for the project CKB-next. [
+                a(href='https://github.com/ckb-next/ckb-next/pull/206') PR206
+                | ,
+                a(href='https://github.com/ckb-next/ckb-next/pull/221') PR221
+                | ,
+                a(href='https://github.com/ckb-next/ckb-next/pull/228') PR228
+                | ]
+                button.btn.btn-link.collapsed(data-toggle='collapse', data-target='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+                  i.fas.fa-caret-down
+            #collapseThree.collapse(aria-labelledby='headingThree', data-parent='#accordion')
+              .card-body
+                | CKB-next is an open source driver that enables RGB and communication for Corsair keyboard products on
+                | Linux platforms.
+          .card
+            #headingFour.card-header
+              h5.mb-0
+                | Aided with packaging
+                a(href='https://launchpad.net/thunderbird/+topcontributors') Thunderbird
+                | .
+                button.btn.btn-link.collapsed(data-toggle='collapse', data-target='#collapseFour', aria-expanded='false', aria-controls='collapseFour')
+                  i.fas.fa-caret-down
+            #collapseFour.collapse(aria-labelledby='headingFour', data-parent='#accordion')
+              .card-body
+                | Thunderbird is an open source email and calendar based application developmed by the Mozilla Foundation.
+                | It is based on similar technologies to Mozilla Firefox.
+          .card
+            #headingFive.card-header
+              h5.mb-0
+                | Aided with packaging vlc snaps for better snap compliance. [
+                a(href='https://github.com/videolan/vlc/pull/75') PR75
+                | ]
+                button.btn.btn-link.collapsed(data-toggle='collapse', data-target='#collapseFive', aria-expanded='false', aria-controls='collapseFive')
+                  i.fas.fa-caret-down
+            #collapseFive.collapse(aria-labelledby='headingFive', data-parent='#accordion')
+              .card-body
+                | VLC is an open source media program that enables the playback of video and audio.
+          .card
+            #headingSix.card-header
+              h5.mb-0
+                | Enabled snap theme support for the Adapta-GTK theme for snap packages. 
+                br
+                a(href='https://snapcraft.io/adapta-gtk-snap')
+                  img(alt='Get it from the Snap Store', src='https://snapcraft.io/static/images/badges/en/snap-store-white.svg')
+                button.btn.btn-link.collapsed(data-toggle='collapse', data-target='#collapseSix', aria-expanded='false', aria-controls='collapseSix')
+                  i.fas.fa-caret-down
+            #collapseSix.collapse(aria-labelledby='headingSix', data-parent='#accordion')
+              .card-body
+                | Adapta-GTK is a theme created by Tista-500. It is designed to recreate Google's material design for
+                | Linux.
+        p
+          | Through the above experiences, I have gained experience in contributing to a wide-variety of
+          | packages. This includes learning to follow through with feature requests from email and permissioning to
+          | implementation. In addition, I have learnt and applied a wide variety of skills that have proved useful for
+          | contributing. This includes the
+          | following.
+        ul
+          li
+            | Successfully utilised Docker to aid in building and packaging a wide variety projects.
+          li
+            | Learned new tricks across various version control platforms including Git, Mercurial and Bazaar. I also
+            | learned how to sign my requests and publish them on Launchpad.
+          li
+            | Discovered various linting utilities including clippy (Rust), Pylint and Shellcheck. These have been
+            | useful for finding potential problematic areas in open code.
+          li
+            | Learned how to provide meaningful commit messages, and etiquette for pull requests.
+        |         In addition, this year I successfully completed Hacktoberfest. In doing so, contributed to a large variety of
+        |         Rust projects. This was a valuable experience in experiencing commercial Rust development.
+        p
+        .row
+          .col-1
+          .col-9
+            .text-center
+              img.img-fluid.mx-auto.d-block.align-self-center(src='/images/hacktoberfest.webp', alt='hacktoberfest picture')
+          .col-1
+    .project-header.mt-3.mx-auto
+      .container
+        h1 Academic Projects
+        p
+          | These projects were completed during my time studying at Imperial. Unfortunately, the source code
+          | for some of the projects are not available as they are still used as courseworks.
+      .container
+        .row
+          .col-12.col-md-6.mt-5
+            .card.g-100
+              img.card-img-top(src='/images/thesis.webp', alt='PowerKap thesis image')
+              .card-content
+                .card-title
+                  i.show.fa.fa-ellipsis-v.fa-lg.float-right
+                  h5 PowerKap
+                p.card-text
+                  | This was my final-year Masters project/thesis that explores the power profiling capabilities and
+                  | behaviours on Linux.
+                  br
+                  br
+                  |                 A copy of my thesis can be found 
+                  a(href='https://www.imperial.ac.uk/media/imperial-college/faculty-of-engineering/computing/public/1617-ug-projects/Krish-De-Souza---PowerKap;-A-tool-for-Improving-Energy-Transparency-for-Software-Developers-on-GNU.Linux-(x86)-platforms.pdf') here.
+                  br
+                  |                 My project code can also be found 
+                  a(href='https://github.com/Kedstar99/PowerKap') here.
+              .card-reveal
+                .card-title
+                  h5 PowerKap
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                  span(aria-hidden='true') ×
+                p
+                  | Energy awareness for a specific program can be a difficult aspect to measure. This element is becoming
+                  | increasingly important in an increasingly energy conscious world. In software, enerrgy usage is 
+                  | a difficult measure to quantify mainly because of the large amount of asynchronous and synchronous
+                  | aspects that make up an Operating System. With advanced schedulers, it is difficult to isolate exactly
+                  | how much energy can be attributed to a specific program. This is manly through the use of various
+                  | techniques that buffer and consolidate data across different programs. As such, isolating the energy consumption
+                  | of a specific program over it's execution can be difficult.
+                  br
+                  br
+                  |  This project explores some of the current techniques that are available to profile energy consumption
+                  |  of programs. Within this project, I created a technique to profile the energy consumed by the CPU, RAM, GPU, battery
+                  |  and network components of a given program. This was subsequently tested across a wide range of benchmarks and
+                  |  energy efficient/inefficient programs that explore the effectiveness of my profiler.
+                  br
+                  br
+                  | I perform this comparison against a large amount of schedulers, governers and hardware along with
+                  | general program comparisons between
+                  | Firefox and Chrome. Further details of my program can seen in my 
+                  a(href='https://www.imperial.ac.uk/media/imperial-college/faculty-of-engineering/computing/public/1617-ug-projects/Krish-De-Souza---PowerKap;-A-tool-for-Improving-Energy-Transparency-for-Software-Developers-on-GNU.Linux-(x86)-platforms.pdf') thesis.
+          .col-12.col-md-6.mt-5
+            .card.g-100
+              img.card-img-top(src='/images/sharify.webp', alt='Sharify image')
+              .card-content
+                .card-title
+                  i.show.fa.fa-ellipsis-v.fa-lg.float-right
+                  h5 Sharify
+                p.card-text
+                  | An AirBnB style app designed to fascilitate the sharing of common household items.
+              .card-reveal
+                .card-title
+                  button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') ×
+                  h5 Sharify
+                | A supervisor at Imperial tasked us with creating a platform for the lending and borrowing of items. The
+                | key idea was that the items aren't being used by their owner all the time, and so could be lent out to
+                | others who need them. Sharify was created to bring about the closeness that neighbours in smaller towns
+                | could have, where they would simply go next door to borrow something they needed.
+                br
+                br
+                | Sharify was developed across three platforms: a website, an Android app and an iOS app. These were
+                | serviced by a backend that handled the users, items and transactions. For this project, I was 
+                | responsible for the web-app for the site.
+                | For this site, I helped develop routes using NodeJS + Express and MongoDB. I was also responsible for
+                | setting up authentication and developing a test framework using Supertest and MochaJS. Finally, I helped
+                | design the client side iteractions using twitter bootstrap and JQuery.
+                br
+                br
+                | An example prototype video for the site can be found 
+                a(href='https://www.youtube.com/watch?v=IKpMxZB25MM') here
+                | .
+                |  Source code and reports for this project are available on request.
+        .row
+          .col-12.col-md-6.mt-5
+            .card.g-100
+              img.card-img-top(src='/images/wikimaster.webp', alt='WikiMaster Image')
+              .card-content
+                .card-title
+                  i.show.fa.fa-ellipsis-v.fa-lg.float-right
+                  h5 Wikimaster, A Wikipedia-based quiz game
+                p.card-text
+                  | WikiMaster is a quiz app using questions that are automatically generated from Wikipedia articles.
+                  | This app was unique in being capable of offering quizzes on any topic in the world.
+              .card-reveal
+                .card-title
+                  button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') ×
+                  h5 Wikimaster, A Wikipedia-based quiz game
+                p
+                  | WikiMaster is a quiz app using questions that are automatically generated from Wikipedia articles.
+                  | In this way, the app could quiz a user on almost any topic in the world, which we feel would be rather
+                  | unique.
+                  br
+                  br
+                  | In many ways, this project layed the foundation for our architecture and project flow that proved
+                  | successful for future projects. For this project, I worked with others on the backend which was written using
+                  | NodeJS + express. I also helped build the website using Bootstrap and JQuery along with design the database interactions.
+                  br
+                  br
+                  | This project was chosen to be demonstrated for the department's open day.
+                  | Source code is available for this project on request.
+          .col-12.col-md-6.mt-5
+            .card.g-100
+              img.card-img-top(src='/images/pintos.webp', alt='Pintos image')
+              .card-content
+                .card-title
+                  i.show.fa.fa-ellipsis-v.fa-lg.float-right
+                  h5 Pintos
+                p.card-text
+                  | Operating System Coursework
+                  br
+                  br
+                  | A copy of the specification can be found 
+                  a(href='https://www.doc.ic.ac.uk/~mjw03/OSLab/pintos.pdf') here
+                  | .
+              .card-reveal
+                .card-title
+                  button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') ×
+                  h5 Pintos
+                p
+                  | This was a group project to implement Pintos under the specification listed previously. For this
+                  | project, we needed to
+                  | implement many aspects that are critical for Operating System designs. This includes a expansive
+                  | virtual memory system that
+                  | expands to multiple pages, user programs, scheduling alogirthms including priority donation and
+                  | multi-level-feedback-queues.
+                  | This was a full x86 Operating System that was designed to be run on QEMU.
+                  br
+                  br
+                  | This project tested time management, C99 skills and skills managing concurrent access.
+        .row
+          .col-12.col-md-6.mt-5
+            .card.g-100
+              img.card-img-top(src='/images/wacc.webp', alt='WACC image')
+              .card-content
+                .card-title
+                  i.show.fa.fa-ellipsis-v.fa-lg.float-right
+                  h5 WACC
+                p.card-text
+                  | The WACC coursework was a custom language coursework designed to test the fundamental basics of
+                  | compiler design.
+                  | It was designed to convert a custom statically typed TOY language to ARM7 assembly. This project
+                  | was written in Java.
+              .card-reveal
+                .card-title
+                  button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') ×
+                  h5 WACC
+                p
+                  | This was a group project to implement WACC. This project was split up into multiple stages based on
+                  | syntax, semantic
+                  | and code generation.
+                  br
+                  br
+                  |  For implementing this code, we used ANTLR4 for parsing. This provided a useful tree structure that was
+                  |  useful for traversing
+                  |  the code. Each of the three stages of syntax, semantic and code generation were implemented using this
+                  |  tree. This is because the tree enabled the use of the visitor pattern which was an elegant approach to
+                  |  only visiting the nodes that we care about.
+                  br
+                  br
+                  | As an extension to this project, we wrote a toy implementation of battleships that successfully ran on
+                  | QEMU.
+          .col-12.col-md-6.mt-5
+            .card.g-100
+              img.card-img-top(src='/images/pi.webp', alt='Raspberry pi image')
+              .card-content
+                .card-title
+                  h5 Raspberry Pi project
+                  p.card-text
+                    | As part of first year projects, we created a ARM assembler and emulator in C. This was subsequently
+                    | used to write a custom
+                    | assembly script that ran leds in a specific pattern in bare-metal assembly.
+                    br
+                    br
+                    | A demonstration for this project can be found 
+                    a(href='https://www.youtube.com/watch?v=cNdRP9X7RQE') here
+                    | .
+
+    script(src='https://code.jquery.com/jquery-3.3.1.min.js', integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=', crossorigin='anonymous')
+    script(src='/js/card.js', integrity='sha384-FrDCrvwkHAmNeKB9w7ccNw3+v+pSzQ3xmDKW8w4FVEEK7piwdMKw2OuOZ1D2hzuP', crossorigin='anonymous')
+    include ./footer.pug
+
+
