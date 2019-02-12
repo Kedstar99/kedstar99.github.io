@@ -1,3 +1,11 @@
+.card{
+    color: white
+}
+
+.card a{
+    color: #85007e
+}
+
 .card .card-img-top{
     height: 400px;
 }
@@ -5,7 +13,6 @@
 .card .card-content{
     height: 160px;
     background-color: #009688;
-    color: white;
 }
 
 .card .card-action{
@@ -54,9 +61,10 @@
     display: none;    
 }
 
+.card .card-reveal .card-title {
+    margin: 20px
+}
+
 .card .card-reveal p{
-    color: white;
     margin:20px ;
-    padding-left: 5px;
-    padding-right: 5px;
 }
