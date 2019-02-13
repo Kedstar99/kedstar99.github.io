@@ -61,10 +61,9 @@
     bottom:0;
     height: 0;
     z-index: 1;
-    display: none;
     background-color: #009688;
-    -webkit-transition: height .3s ease;
-    transition: height .3s ease;
+    -webkit-transition: height .9s ease;
+    transition: height .9s ease;
 }
 
 .card .card-reveal .card-title {
