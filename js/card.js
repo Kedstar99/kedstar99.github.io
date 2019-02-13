@@ -14,6 +14,6 @@ for (let elem of elipsisArr) {
 }
 
 var closeArr = document.getElementsByClassName('close')
-for (let elem of elipsisArr) {
+for (let elem of closeArr) {
     elem.onclick = close_card(elem)
 }
