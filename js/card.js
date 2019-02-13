@@ -5,7 +5,7 @@ var open_card = function(element) {
 
 var close_card = function(element) {
     var closest_reveal = element.parentElement.parentElement;
-    closest_reveal.style.height="0px"
+    closest_reveal.style.height="0%"
 }
 
 var elipsisArr = document.getElementsByClassName('show fa-ellipsis-v')
