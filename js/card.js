@@ -1,12 +1,12 @@
 var open_card = function(element) {
     var closest_reveal = element.parentElement.parentElement.parentElement.children[2]
     closest_reveal.classList.remove('pop-out')
-    closest_reveal.classList.add('pop-in')
+    closest_reveal.classList.add('pop-up')
 }
 
 var close_card = function(element) {
     var closest_reveal = element.parentElement.parentElement;
-    closest_reveal.classList.remove('pop-in')
+    closest_reveal.classList.remove('pop-up')
     closest_reveal.classList.add('pop-out')
 }
 
