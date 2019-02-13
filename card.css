@@ -1,9 +1,14 @@
 .card{
-    color: white
+    color: white;
+    background-color: #009688;
 }
 
 .card a{
     color: #85007e
+}
+
+.card i{
+    color: white
 }
 
 .card .card-img-top{
@@ -12,7 +17,6 @@
 
 .card .card-content{
     height: 160px;
-    background-color: #009688;
 }
 
 .card .card-action{
@@ -51,7 +55,6 @@
 .card .card-reveal{    
     padding: 20px;
     position: absolute;
-    background-color: #009688;
     width: 100%;
     overflow-y: auto;
     left:0;
