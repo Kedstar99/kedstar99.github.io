@@ -1,11 +1,13 @@
 var open_card = function(element) {
     var closest_reveal = element.parentElement.parentElement.parentElement.children[2]
-    closest_reveal.style.height="100%"
+    closest_reveal.classList.remove('pop-out')
+    closest_reveal.classList.add('pop-in')
 }
 
 var close_card = function(element) {
     var closest_reveal = element.parentElement.parentElement;
-    closest_reveal.style.height="0%"
+    closest_reveal.classList.remove('pop-in')
+    closest_reveal.classList.add('pop-out')
 }
 
 var elipsisArr = document.getElementsByClassName('show fa-ellipsis-v')
