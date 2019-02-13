@@ -61,7 +61,8 @@
     bottom:0;
     height: 100%;
     z-index: 1;
-    display: none;    
+    display: none;
+    background-color: #009688;
 }
 
 .card .card-reveal .card-title {
