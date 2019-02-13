@@ -68,6 +68,7 @@
     background-color: #009688;
     -webkit-transition: height .9s ease;
     transition: height .9s ease;
+    display: None
 }
 
 .card .card-reveal .card-title {
