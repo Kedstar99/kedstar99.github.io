@@ -64,21 +64,20 @@ button.close{
     left:0;
     bottom:0;
     height: 0;
-    opacity: 0;
     z-index: 1;
     background-color: #009688;
     display: block;
     visibility: hidden;
 }
 
-.card .card-reveal .pop-out {
+.card .card-reveal.pop-out {
     visibility: hidden;
     height: 0;
     -webkit-transition: height .9s ease, visibility .9s;
     transition: height .9s ease, visibility .9s;
 }
 
-.card .card-reveal .pop-up {
+.card .card-reveal.pop-up {
     visibility: visible;
     height: 100%;
     -webkit-transition: height .9s ease, visibility .9s;
