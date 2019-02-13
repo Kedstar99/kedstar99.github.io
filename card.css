@@ -73,8 +73,8 @@ button.close{
 .card .card-reveal.pop-out {
     visibility: hidden;
     height: 0;
-    -webkit-transition: height .9s ease, visibility .9s;
-    transition: height .9s ease, visibility .9s;
+    -webkit-transition: height .9s ease, visibility .6s;
+    transition: height .9s ease, visibility .6s;
 }
 
 .card .card-reveal.pop-up {
