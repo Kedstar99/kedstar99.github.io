@@ -10,10 +10,14 @@ var close_card = function(element) {
 
 var elipsisArr = document.getElementsByClassName('show fa-ellipsis-v')
 for (let elem of elipsisArr) {
-    elem.onclick = open_card(elem)
+    elem.addEventListener('click',  function(e) {
+        open_card(elem)
+    }, false)
 }
 
 var closeArr = document.getElementsByClassName('close')
 for (let elem of closeArr) {
-    elem.onclick = close_card(elem)
+    elem.addEventListener('click', function(e) {
+        close_card(elem)
+    }, false)
 }
