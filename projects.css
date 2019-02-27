@@ -21,7 +21,8 @@ button.close{
 }
 
 .project-card .project-card-img-top{
-    width:100%
+    width:100%;
+    height:400px;
 }
 
 .project-card .project-card-content{
