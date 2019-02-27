@@ -7,45 +7,45 @@ button.close{
     color: white;
 }
 
-.card{
+.project-card{
     color: white;
     background-color: #009688;
 }
 
-.card a{
+.project-card a{
     color: #6200ee
 }
 
-.card i{
+.project-card i{
     color: white
 }
 
-.card .card-img-top{
+.project-card .project-card-img-top{
     height: 400px;
 }
 
-.card .card-content{
+.project-card .project-card-content{
     height: 160px;
 }
 
-.card .card-action{
+.project-card .project-card-action{
     padding: 20px;
     border-top: 1px solid rgba(160, 160, 160, 0.2);
 }
 
-.card .card-title{
+.project-card .project-card-title{
     margin-bottom: .75rem;
     padding-left: 5px;
     padding-right: 5px;
     padding-top: 5px;
 }
 
-.card .card-text{
+.project-card .project-card-text{
     margin-bottom: 0;
     padding-left: 5px;
 }
 
-.card .card-action a{
+.project-card .project-card-action a{
     font-size: 15px;
     color: #ffab40;
     text-transform:uppercase;
@@ -56,12 +56,12 @@ button.close{
     -ms-transition: color 0.3s ease;
     transition: color 0.3s ease;
 }
-.card .card-action a:hover{    
+.project-card .project-card-action a:hover{    
     color:#ffd8a6;
     text-decoration:none;
 }
 
-.card .card-reveal{    
+.project-card .project-card-reveal{    
     padding: 20px;
     position: absolute;
     width: 100%;
@@ -75,24 +75,24 @@ button.close{
     visibility: hidden;
 }
 
-.card .card-reveal.pop-out {
+.project-card .project-card-reveal.pop-out {
     visibility: hidden;
     height: 0;
     -webkit-transition: height .9s ease, visibility .6s;
     transition: height .9s ease, visibility .6s;
 }
 
-.card .card-reveal.pop-up {
+.project-card .project-card-reveal.pop-up {
     visibility: visible;
     height: 100%;
     -webkit-transition: height .9s ease, visibility .9s;
     transition: height .9s ease, visibility .9s;
 }
 
-.card .card-reveal .card-title {
+.project-card .project-card-reveal .project-card-title {
     margin: 20px;
 }
 
-.card .card-reveal p{
+.project-card .project-card-reveal p{
     margin:20px ;
 }

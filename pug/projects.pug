@@ -2,7 +2,7 @@ doctype html
 html(lang='en')
   head
     include ./head.pug
-    link(rel='stylesheet', href='projects.css', integrity='sha384-2dN7I4Q+RwrPp9nHcyJwdSKrQQB0mQrQ7kmeBSPTCYbYF70MzSEY7hXr23KAg9I3', crossorigin='anonymous')
+    link(rel='stylesheet', href='projects.css', integrity='sha384-BgP/57peDqxn3bBcuqu88OUJBVJMx/1O2qqaLUPZR1tPU3f4uedLTa8/sCPwC19U', crossorigin='anonymous')
     title Krish De Souza - Projects
   body
     include ./navbar.pug
@@ -131,13 +131,13 @@ html(lang='en')
       .container
         .row
           .col-12.col-md-6.mt-5
-            .card.g-100
-              img.card-img-top(src='/images/thesis.webp', alt='PowerKap thesis image')
-              .card-content
-                .card-title
+            .project-card.g-100
+              img.project-card-img-top(src='/images/thesis.webp', alt='PowerKap thesis image')
+              .project-card-content
+                .project-card-title
                   i.show.fa.fa-ellipsis-v.fa-lg.float-right.mt-2
                   h5 PowerKap
-                p.card-text
+                p.project-card-text
                   | This was my final-year Masters project/thesis that explores the power profiling capabilities and
                   | behaviours on Linux.
                   br
@@ -147,12 +147,12 @@ html(lang='en')
                   br
                   | My project code can also be found 
                   a(href='https://github.com/Kedstar99/PowerKap') here.
-              .card-reveal.pop-out
-                .card-title
+              .project-card-reveal.pop-out
+                .project-card-title
                   button.close(type='button', data-dismiss='modal', aria-label='Close')
                     span(aria-hidden='true') ×
                   h5 PowerKap
-                p.card-text
+                p.project-card-text
                   | Energy awareness for a specific program can be a difficult aspect to measure. This element is becoming
                   | increasingly important in an increasingly energy conscious world. In software, enerrgy usage is 
                   | a difficult measure to quantify mainly because of the large amount of asynchronous and synchronous
@@ -173,20 +173,20 @@ html(lang='en')
                   | Firefox and Chrome. Further details of my program can seen in my 
                   a(href='https://www.imperial.ac.uk/media/imperial-college/faculty-of-engineering/computing/public/1617-ug-projects/Krish-De-Souza---PowerKap;-A-tool-for-Improving-Energy-Transparency-for-Software-Developers-on-GNU.Linux-(x86)-platforms.pdf') thesis.
           .col-12.col-md-6.mt-5
-            .card.g-100
-              img.card-img-top(src='/images/sharify.webp', alt='Sharify image')
-              .card-content
-                .card-title
+            .project-card.g-100
+              img.project-card-img-top(src='/images/sharify.webp', alt='Sharify image')
+              .project-card-content
+                .project-card-title
                   i.show.fa.fa-ellipsis-v.fa-lg.float-right.mt-2
                   h5 Sharify
-                p.card-text
+                p.project-card-text
                   | An AirBnB style app designed to fascilitate the sharing of common household items.
-              .card-reveal.pop-out
-                .card-title
+              .project-card-reveal.pop-out
+                .project-card-title
                   button.close(type='button', data-dismiss='modal', aria-label='Close')
                     span(aria-hidden='true') ×
                   h5 Sharify
-                p.card-text
+                p.project-card-text
                   | A supervisor at Imperial tasked us with creating a platform for the lending and borrowing of items. The
                   | key idea was that the items aren't being used by their owner all the time, and so could be lent out to
                   | others who need them. Sharify was created to bring about the closeness that neighbours in smaller towns
@@ -206,21 +206,21 @@ html(lang='en')
                   |  Source code and reports for this project are available on request.
         .row
           .col-12.col-md-6.mt-5
-            .card.g-100
-              img.card-img-top(src='/images/wikimaster.webp', alt='WikiMaster Image')
-              .card-content
-                .card-title
+            .project-card.g-100
+              img.project-card-img-top(src='/images/wikimaster.webp', alt='WikiMaster Image')
+              .project-card-content
+                .project-card-title
                   i.show.fa.fa-ellipsis-v.fa-lg.float-right.mt-2
                   h5 Wikimaster, A Wikipedia-based quiz game
-                p.card-text
+                p.project-card-text
                   | WikiMaster is a quiz app using questions that are automatically generated from Wikipedia articles.
                   | This app was unique in being capable of offering quizzes on any topic in the world.
-              .card-reveal.pop-out
-                .card-title
+              .project-card-reveal.pop-out
+                .project-card-title
                   button.close(type='button', data-dismiss='modal', aria-label='Close')
                     span(aria-hidden='true') ×
                   h5 Wikimaster, A Wikipedia-based quiz game
-                p.card-text
+                p.project-card-text
                   | WikiMaster is a quiz app using questions that are automatically generated from Wikipedia articles.
                   | In this way, the app could quiz a user on almost any topic in the world, which we feel would be rather
                   | unique.
@@ -234,24 +234,24 @@ html(lang='en')
                   | This project was chosen to be demonstrated for the department's open day.
                   | Source code is available for this project on request.
           .col-12.col-md-6.mt-5
-            .card.g-100
-              img.card-img-top(src='/images/pintos.webp', alt='Pintos image')
-              .card-content
-                .card-title
+            .project-card.g-100
+              img.project-card-img-top(src='/images/pintos.webp', alt='Pintos image')
+              .project-card-content
+                .project-card-title
                   i.show.fa.fa-ellipsis-v.fa-lg.float-right.mt-2
                   h5 Pintos
-                p.card-text
+                p.project-card-text
                   | Operating System Coursework
                   br
                   br
                   | A copy of the specification can be found 
                   a(href='https://www.doc.ic.ac.uk/~mjw03/OSLab/pintos.pdf') here.
-              .card-reveal.pop-out
-                .card-title
+              .project-card-reveal.pop-out
+                .project-card-title
                   button.close(type='button', data-dismiss='modal', aria-label='Close')
                     span(aria-hidden='true') ×
                   h5 Pintos
-                p.card-text
+                p.project-card-text
                   | This was a group project to implement Pintos under the specification listed previously. For this
                   | project, we needed to
                   | implement many aspects that are critical for Operating System designs. This includes a expansive
@@ -264,23 +264,23 @@ html(lang='en')
                   | This project tested time management, C99 skills and skills managing concurrent access.
         .row
           .col-12.col-md-6.mt-5
-            .card.g-100
-              img.card-img-top(src='/images/wacc.webp', alt='WACC image')
-              .card-content
-                .card-title
+            .project-card.g-100
+              img.project-card-img-top(src='/images/wacc.webp', alt='WACC image')
+              .project-card-content
+                .project-card-title
                   i.show.fa.fa-ellipsis-v.fa-lg.float-right.mt-2
                   h5 WACC
-                p.card-text
+                p.project-card-text
                   | The WACC coursework was a custom language coursework designed to test the fundamental basics of
                   | compiler design.
                   | It was designed to convert a custom statically typed TOY language to ARM7 assembly. This project
                   | was written in Java.
-              .card-reveal.pop-out
-                .card-title
+              .project-card-reveal.pop-out
+                .project-card-title
                   button.close(type='button', data-dismiss='modal', aria-label='Close')
                     span(aria-hidden='true') ×
                   h5 WACC
-                p.card-text
+                p.project-card-text
                   | This was a group project to implement WACC. This project was split up into multiple stages based on
                   | syntax, semantic
                   | and code generation.
@@ -296,12 +296,12 @@ html(lang='en')
                   | As an extension to this project, we wrote a toy implementation of battleships that successfully ran on
                   | QEMU.
           .col-12.col-md-6.mt-5
-            .card.g-100
-              img.card-img-top(src='/images/pi.webp', alt='Raspberry pi image')
-              .card-content
-                .card-title
+            .project-card.g-100
+              img.project-card-img-top(src='/images/pi.webp', alt='Raspberry pi image')
+              .project-card-content
+                .project-card-title
                   h5 Raspberry Pi project
-                  p.card-text
+                  p.project-card-text
                     | As part of first year projects, we created a ARM assembler and emulator in C. This was subsequently
                     | used to write a custom
                     | assembly script that ran leds in a specific pattern in bare-metal assembly.
