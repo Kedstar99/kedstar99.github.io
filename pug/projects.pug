@@ -2,7 +2,7 @@ doctype html
 html(lang='en')
   head
     include ./head.pug
-    link(rel='stylesheet', href='card.css', integrity='sha384-LY7dLpmGrP2Hi5Pct3A7KRVJZYHZI42OIprsj0nEXBmomJhZs5YwYWdVuMqGrjkq', crossorigin='anonymous')
+    link(rel='stylesheet', href='projects.css', integrity='sha384-2dN7I4Q+RwrPp9nHcyJwdSKrQQB0mQrQ7kmeBSPTCYbYF70MzSEY7hXr23KAg9I3', crossorigin='anonymous')
     title Krish De Souza - Projects
   body
     include ./navbar.pug
@@ -91,7 +91,7 @@ html(lang='en')
                     h5.mb-0 Enabled theme support for the Adapta-GTK theme for snap packages. 
                   .col-2.col-md-3.col-lg-3.d-sm-none.d-md-block
                     a.float-right.d-none.d-sm-block(href='https://snapcraft.io/adapta-gtk-snap')
-                      img(alt='Get it from the Snap Store', src='/images/snap-store-white.webp')
+                      img#snap-store(alt='Get it from the Snap Store', src='/images/snap-store-white.webp')
                   .col-1.col-md-1.col-lg-1.col-sm-3.col-xs-3
                     button.btn.btn-link.float-right.collapsed(data-toggle='collapse', data-target='#collapseSix', aria-expanded='false', aria-controls='collapseSix')
                       i.fas.fa-caret-down
