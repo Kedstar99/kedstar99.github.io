@@ -17,9 +17,8 @@ html(lang='en')
       .container
         h1 Current Projects and Contributions
         p
-          | This year, one of my major goals has been to participate in a larger set of open source contributions. In this venture I
-          | have been rather successful. So far I have managed to make multiple contributions to a variety of major projects.
-          | This includes the following contributions.
+          | This year, my goal has been to build upon last year's success. Mainly by continuing my ventures into Hacktoberfest and Open source. 
+          | My current project is to build a Nintendo64 emulator in Rust. Feel free to follow my progress on Github.
         #accordion.my-3
           .card
             #headingOne.card-header
@@ -43,7 +42,9 @@ html(lang='en')
                 | Fixed update checking in VSCode for snap users. 
                 a(href='https://github.com/Microsoft/vscode/pull/63716') [PR63716,
                 a(href='https://github.com/Microsoft/vscode/pull/64392') PR64392,
-                a(href='https://github.com/Microsoft/vscode/pull/65579') PR65579]
+                a(href='https://github.com/Microsoft/vscode/pull/65579') PR65579,
+                a(href='https://github.com/microsoft/vscode/pull/69722') PR69722,
+                a(href='https://github.com/microsoft/vscode/pull/69979') PR69979]
                 button.btn.btn-link.float-right.collapsed(data-toggle='collapse', data-target='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
                   i.fas.fa-caret-down
             #collapseTwo.collapse(aria-labelledby='headingTwo', data-parent='#accordion')
@@ -86,6 +87,16 @@ html(lang='en')
                 | VLC is an open source media program that enables the playback of video and audio.
           .card
             #headingSix.card-header
+              h5.mb-0
+                | Added dark mode to Fedora's SilverBlue website.
+                a(href='https://github.com/fedora-silverblue/silverblue-site/pull/73') [PR73]
+                button.btn.btn-link.float-right.collapsed(data-toggle='collapse', data-target='#collapseSix', aria-expanded='false', aria-controls='collapseSix')
+                  i.fas.fa-caret-down
+            #collapseSix.collapse(aria-labelledby='headingSix', data-parent='#accordion')
+              .card-body
+                | Fedora Silverblue is next generation Operating System maintained by RedHat.
+          .card
+            #headingSeven.card-header
               .row
                   .col-9.col-md-8.col-lg-8.col-sm-9.col-xs-9
                     h5.mb-0 Enabled theme support for the Adapta-GTK theme for snap packages. 
@@ -93,9 +104,9 @@ html(lang='en')
                     a.float-right.d-none.d-sm-block(href='https://snapcraft.io/adapta-gtk-snap')
                       img#snap-store(alt='Get it from the Snap Store', src='/images/snap-store-white.webp')
                   .col-1.col-md-1.col-lg-1.col-sm-3.col-xs-3
-                    button.btn.btn-link.float-right.collapsed(data-toggle='collapse', data-target='#collapseSix', aria-expanded='false', aria-controls='collapseSix')
+                    button.btn.btn-link.float-right.collapsed(data-toggle='collapse', data-target='#collapseSeven', aria-expanded='false', aria-controls='collapseSeven')
                       i.fas.fa-caret-down
-            #collapseSix.collapse(aria-labelledby='headingSix', data-parent='#accordion')
+            #collapseSeven.collapse(aria-labelledby='headingSeven', data-parent='#accordion')
               .card-body
                 | Adapta-GTK is a theme created by Tista-500. It is designed to recreate Google's material design for
                 | Linux.
@@ -121,7 +132,19 @@ html(lang='en')
         p
         .row
           .col
-            img.img-fluid.mx-auto.d-block.align-self-center(src='/images/hacktoberfest.webp', alt='hacktoberfest picture')
+            #carouselIndicators.carousel.slide(data-ride='carousel')
+              .carousel-inner
+                .carousel-item.active
+                  img.d-block.w-100(src='/images/hacktoberfest2018.webp', alt='hacktoberfest 2018 picture')
+                .carousel-item
+                  img.d-block.w-100(src='/images/hacktoberfest2019.webp', alt='hacktoberfest 2019 picture')
+              a.carousel-control-prev(href='#carouselIndicators', role='button', data-slide='prev')
+                span.carousel-control-prev-icon(aria-hidden='true')
+                span.sr-only Previous
+              a.carousel-control-next(href='#carouselIndicators', role='button', data-slide='next')
+                span.carousel-control-next-icon(aria-hidden='true')
+                span.sr-only Next
+
     .project-header.mt-5.mx-auto
       .container
         h1 Academic Projects
@@ -310,7 +333,8 @@ html(lang='en')
                     | A demonstration for this project can be found 
                     a(href='https://www.youtube.com/watch?v=cNdRP9X7RQE') here.
 
-    script(src='/js/card.js', integrity='sha384-dQockkvyKFWCAZmfqHeMl9WSqLM60ywJCZuI3LRkwHCgTpVtg63q6agupD15xaUc', crossorigin='anonymous')
     include ./footer.pug
+    script(src='/js/card.js', integrity='sha384-dQockkvyKFWCAZmfqHeMl9WSqLM60ywJCZuI3LRkwHCgTpVtg63q6agupD15xaUc', crossorigin='anonymous')
+    script(src='/js/carousel.js', crossorigin='anonymous')
 
 
