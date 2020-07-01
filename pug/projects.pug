@@ -2,7 +2,7 @@ doctype html
 html(lang='en')
   head
     include ./head.pug
-    link(rel='stylesheet', href='projects.css', integrity='sha384-OLj0QjZKb83+2Vd40TykJuKLfMk8hvZSQ0a7NUF7mtx2zautakO4MRy0EHDntL43', crossorigin='anonymous')
+    link(rel='stylesheet', href='css/projects.css', integrity='sha384-OLj0QjZKb83+2Vd40TykJuKLfMk8hvZSQ0a7NUF7mtx2zautakO4MRy0EHDntL43', crossorigin='anonymous')
     title Krish De Souza - Projects
   body
     include ./navbar.pug
@@ -111,6 +111,16 @@ html(lang='en')
               .card-body
                 | Adapta-GTK is a theme created by Tista-500. It is designed to recreate Google's material design for
                 | Linux.
+          .card
+            #headingEight.card-header
+              h5.mb-0
+                | Enabled local DoH HTTP/2 support for DNSCryptProxy
+                a(href='https://github.com/DNSCrypt/dnscrypt-proxy/pull/1384') [PR1384]
+                button.btn.btn-link.float-right.collapsed(data-toggle='collapse', data-target='#collapseEight', aria-expanded='false', aria-controls='collapseEight')
+                  i.fas.fa-caret-down
+            #collapseSeven.collapse(aria-labelledby='headingEight', data-parent='#accordion')
+              .card-body
+                | DNSCryptProxy is software that fascillitates DNS over HTTPS on Linux and Windows.
         p
           | Through the above experiences, I have gained experience in contributing to a wide-variety of
           | packages. This includes learning to follow through with feature requests from email and permissioning to
@@ -336,6 +346,5 @@ html(lang='en')
 
     include ./footer.pug
     script(src='/js/card.js', integrity='sha384-dQockkvyKFWCAZmfqHeMl9WSqLM60ywJCZuI3LRkwHCgTpVtg63q6agupD15xaUc', crossorigin='anonymous')
-    script(src='/js/carousel.js', integrity='sha384-JsOcoDVMJe/mkgQIRkY0/Q0veU4CscD9U57tby+MYnOe9VhI9Vmk2nQo8it/m1e9', crossorigin='anonymous')
 
 

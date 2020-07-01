@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 cd pug || exit
-pug index.pug index.html
-pug projects.pug projects.html
+../node_modules/.bin/pug  index.pug index.html
+../node_modules/.bin/pug  projects.pug projects.html
 mv ./*.html ../
