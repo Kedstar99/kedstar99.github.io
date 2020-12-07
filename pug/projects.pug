@@ -20,24 +20,24 @@ html(lang='en')
           | This year, my goal has been to build upon last year's success. Mainly by continuing my ventures into Hacktoberfest and Open source. 
           | My current project is to build a Nintendo64 emulator in Rust. Feel free to follow my progress on Github.
         #accordion.my-3
-          .card
-            #headingOne.card-header
+          .accordion-item
+            #headingOne.accordion-header
               h5.mb-0
                 | Fixed multiple shell issues/bugs in Valve's Proton software. 
                 a(href='https://github.com/ValveSoftware/Proton/pull/1931') [PR1931,
                 a(href='https://github.com/ValveSoftware/Proton/pull/675') PR675]
-                button.btn.btn-link.float-right.collapsed(data-toggle='collapse', data-target='#collapseOne', aria-expanded='false', aria-controls='collapseOne')
+                button.accordion-button.btn.btn-link.float-right.collapsed(data-bs-toggle='collapse', data-bs-target='#collapseOne', aria-expanded='false', aria-controls='collapseOne')
                   i.fas.fa-caret-down
             #collapseOne.collapse.show(aria-labelledby='headingOne', data-parent='#accordion')
-              .card-body
+              .accordion-body
                 | Proton is a brand new mechanism introduced by Valve to enable Windows games to run on non-Windows
                 | platforms. It works by integrating
                 | various technologies such as WINE and DXVK. These tools translate Windows System calls and DirectX calls
                 | to those which are Linux compatibles.
                 | As a result of their use, these technologies have vastly expanded the number of games that are playable
                 | on Linux.
-          .card
-            #headingTwo.card-header
+          .accordion-item
+            #headingTwo.accordion-header
               h5.mb-0
                 | Fixed update checking in VSCode for snap users. 
                 a(href='https://github.com/Microsoft/vscode/pull/63716') [PR63716,
@@ -45,59 +45,59 @@ html(lang='en')
                 a(href='https://github.com/Microsoft/vscode/pull/65579') PR65579,
                 a(href='https://github.com/microsoft/vscode/pull/69722') PR69722,
                 a(href='https://github.com/microsoft/vscode/pull/69979') PR69979]
-                button.btn.btn-link.float-right.collapsed(data-toggle='collapse', data-target='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+                button.accordion-button.btn.btn-link.float-right.collapsed(data-bs-toggle='collapse', data-bs-target='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
                   i.fas.fa-caret-down
             #collapseTwo.collapse(aria-labelledby='headingTwo', data-parent='#accordion')
-              .card-body
+              .accordion-body
                 | VSCode is an editor provided by Microsoft and based on Electron. It offers IDE like features
                 | across a variety of languages that aid in software development.
-          .card
-            #headingThree.card-header
+          .accordion-item
+            #headingThree.accordion-header
               h5.mb-0
                 | Enabled better ISO C compliance and build mechanisms for the project CKB-next. 
                 a(href='https://github.com/ckb-next/ckb-next/pull/206') [PR206,
                 a(href='https://github.com/ckb-next/ckb-next/pull/221') PR221,
                 a(href='https://github.com/ckb-next/ckb-next/pull/228') PR228]
-                button.btn.btn-link.float-right.collapsed(data-toggle='collapse', data-target='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+                button.accordion-button.btn.btn-link.float-right.collapsed(data-bs-toggle='collapse', data-bs-target='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
                   i.fas.fa-caret-down
             #collapseThree.collapse(aria-labelledby='headingThree', data-parent='#accordion')
-              .card-body
+              .accordion-body
                 | CKB-next is an open source driver that enables RGB and communication for Corsair keyboard products on
                 | Linux platforms.
-          .card
-            #headingFour.card-header
+          .accordion-item
+            #headingFour.accordion-header
               h5.mb-0
                 | Aided with packaging both
                 a(href='https://launchpad.net/thunderbird/+topcontributors')  Thunderbird 
                 | and 
                 a(href='https://github.com/mozilla/gecko-dev/commit/e6b8e53803e10244a9735b18062ce5a56ed221e3')  Firefox.
-                button.btn.btn-link.float-right.collapsed(data-toggle='collapse', data-target='#collapseFour', aria-expanded='false', aria-controls='collapseFour')
+                button.accordion-button.btn.btn-link.float-right.collapsed(data-bs-toggle='collapse', data-bs-target='#collapseFour', aria-expanded='false', aria-controls='collapseFour')
                   i.fas.fa-caret-down
             #collapseFour.collapse(aria-labelledby='headingFour', data-parent='#accordion')
-              .card-body
+              .accordion-body
                 | Thunderbird and Firefox are FOSS mail and web clients built by Mozilla.
-          .card
-            #headingFive.card-header
+          .accordion-item
+            #headingFive.accordion-header
               h5.mb-0
                 | Aided with packaging vlc snaps for better compliance. 
                 a(href='https://github.com/videolan/vlc/pull/75') [PR75]
-                button.btn.btn-link.float-right.collapsed(data-toggle='collapse', data-target='#collapseFive', aria-expanded='false', aria-controls='collapseFive')
+                button.accordion-button.btn.btn-link.float-right.collapsed(data-bs-toggle='collapse', data-bs-target='#collapseFive', aria-expanded='false', aria-controls='collapseFive')
                   i.fas.fa-caret-down
             #collapseFive.collapse(aria-labelledby='headingFive', data-parent='#accordion')
-              .card-body
+              .accordion-body
                 | VLC is an open source media program that enables the playback of video and audio.
-          .card
-            #headingSix.card-header
+          .accordion-item
+            #headingSix.accordion-header
               h5.mb-0
                 | Added dark mode to Fedora's SilverBlue website.
                 a(href='https://github.com/fedora-silverblue/silverblue-site/pull/73') [PR73]
-                button.btn.btn-link.float-right.collapsed(data-toggle='collapse', data-target='#collapseSix', aria-expanded='false', aria-controls='collapseSix')
+                button.accordion-button.btn.btn-link.float-right.collapsed(data-bs-toggle='collapse', data-bs-target='#collapseSix', aria-expanded='false', aria-controls='collapseSix')
                   i.fas.fa-caret-down
             #collapseSix.collapse(aria-labelledby='headingSix', data-parent='#accordion')
-              .card-body
+              .accordion-body
                 | Fedora Silverblue is next generation Operating System maintained by RedHat.
-          .card
-            #headingSeven.card-header
+          .accordion-item
+            #headingSeven.accordion-header
               .row
                   .col-9.col-md-8.col-lg-8.col-sm-9.col-xs-9
                     h5.mb-0 Enabled theme support for the Adapta-GTK theme for snap packages. 
@@ -105,21 +105,21 @@ html(lang='en')
                     a.float-right.d-none.d-sm-block(href='https://snapcraft.io/adapta-gtk-snap')
                       img#snap-store(alt='Get it from the Snap Store', src='/images/snap-store-white.webp')
                   .col-1.col-md-1.col-lg-1.col-sm-3.col-xs-3
-                    button.btn.btn-link.float-right.collapsed(data-toggle='collapse', data-target='#collapseSeven', aria-expanded='false', aria-controls='collapseSeven')
+                    button.accordion-button.btn.btn-link.float-right.collapsed(data-bs-toggle='collapse', data-bs-target='#collapseSeven', aria-expanded='false', aria-controls='collapseSeven')
                       i.fas.fa-caret-down
             #collapseSeven.collapse(aria-labelledby='headingSeven', data-parent='#accordion')
-              .card-body
+              .accordion-body
                 | Adapta-GTK is a theme created by Tista-500. It is designed to recreate Google's material design for
                 | Linux.
-          .card
-            #headingEight.card-header
+          .accordion-item
+            #headingEight.accordion-header
               h5.mb-0
                 | Enabled local DoH HTTP/2 support for DNSCryptProxy
                 a(href='https://github.com/DNSCrypt/dnscrypt-proxy/pull/1384') [PR1384]
-                button.btn.btn-link.float-right.collapsed(data-toggle='collapse', data-target='#collapseEight', aria-expanded='false', aria-controls='collapseEight')
+                button.accordion-button.btn.btn-link.float-right.collapsed(data-bs-toggle='collapse', data-bs-target='#collapseEight', aria-expanded='false', aria-controls='collapseEight')
                   i.fas.fa-caret-down
             #collapseEight.collapse(aria-labelledby='headingEight', data-parent='#accordion')
-              .card-body
+              .accordion-body
                 | DNSCryptProxy is software that fascillitates DNS over HTTPS on Linux and Windows.
         p
           | Through the above experiences, I have gained experience in contributing to a wide-variety of
