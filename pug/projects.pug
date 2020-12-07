@@ -65,7 +65,7 @@ html(lang='en')
             #headingFour.accordion-header
               h5.mb-0
                 button.accordion-button.btn.btn-link.float-right.collapsed(data-bs-toggle='collapse', data-bs-target='#collapseFour', aria-expanded='false', aria-controls='collapseFour')
-                  | Aided with packaging both
+                  | Aided with packaging both  
                   a(href='https://launchpad.net/thunderbird/+topcontributors')  Thunderbird 
                   | and 
                   a(href='https://github.com/mozilla/gecko-dev/commit/e6b8e53803e10244a9735b18062ce5a56ed221e3')  Firefox.
@@ -96,11 +96,13 @@ html(lang='en')
                 button.accordion-button.btn.btn-link.float-right.collapsed(data-bs-toggle='collapse', data-bs-target='#collapseSeven', aria-expanded='false', aria-controls='collapseSeven')
                     | Enabled theme support for the Adapta-GTK theme for snap packages. 
             #collapseSeven.collapse(aria-labelledby='headingSeven', data-parent='#accordion')
-              .accordion-body
-                | Adapta-GTK is a theme created by Tista-500. It is designed to recreate Google's material design for
-                | Linux.
-                a.float-right.d-none.d-sm-block(href='https://snapcraft.io/adapta-gtk-snap')
-                  img#snap-store(alt='Get it from the Snap Store', src='/images/snap-store-white.webp')
+              .accordion-body.row
+                .col-12.col-md-6.mt-5
+                  | Adapta-GTK is a theme created by Tista-500. It is designed to recreate Google's material design for
+                  | Linux.
+                .col-12.col-md-6.mt-5
+                  a.float-right.d-none.d-sm-block(href='https://snapcraft.io/adapta-gtk-snap')
+                    img#snap-store(alt='Get it from the Snap Store' src='/images/snap-store-white.webp')
           .accordion-item
             #headingEight.accordion-header
               h5.mb-0
