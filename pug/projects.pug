@@ -23,10 +23,10 @@ html(lang='en')
           .accordion-item
             #headingOne.accordion-header
               h5.mb-0
+                button.accordion-button.btn.btn-link.float-right.collapsed(data-bs-toggle='collapse', data-bs-target='#collapseOne', aria-expanded='false', aria-controls='collapseOne')
                 | Fixed multiple shell issues/bugs in Valve's Proton software. 
                 a(href='https://github.com/ValveSoftware/Proton/pull/1931') [PR1931,
                 a(href='https://github.com/ValveSoftware/Proton/pull/675') PR675]
-                button.accordion-button.btn.btn-link.float-right.collapsed(data-bs-toggle='collapse', data-bs-target='#collapseOne', aria-expanded='false', aria-controls='collapseOne')
             #collapseOne.collapse.show(aria-labelledby='headingOne', data-parent='#accordion')
               .accordion-body
                 | Proton is a brand new mechanism introduced by Valve to enable Windows games to run on non-Windows
@@ -38,13 +38,13 @@ html(lang='en')
           .accordion-item
             #headingTwo.accordion-header
               h5.mb-0
+                button.accordion-button.btn.btn-link.float-right.collapsed(data-bs-toggle='collapse', data-bs-target='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
                 | Fixed update checking in VSCode for snap users. 
                 a(href='https://github.com/Microsoft/vscode/pull/63716') [PR63716,
                 a(href='https://github.com/Microsoft/vscode/pull/64392') PR64392,
                 a(href='https://github.com/Microsoft/vscode/pull/65579') PR65579,
                 a(href='https://github.com/microsoft/vscode/pull/69722') PR69722,
                 a(href='https://github.com/microsoft/vscode/pull/69979') PR69979]
-                button.accordion-button.btn.btn-link.float-right.collapsed(data-bs-toggle='collapse', data-bs-target='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
             #collapseTwo.collapse(aria-labelledby='headingTwo', data-parent='#accordion')
               .accordion-body
                 | VSCode is an editor provided by Microsoft and based on Electron. It offers IDE like features
@@ -52,11 +52,11 @@ html(lang='en')
           .accordion-item
             #headingThree.accordion-header
               h5.mb-0
+                button.accordion-button.btn.btn-link.float-right.collapsed(data-bs-toggle='collapse', data-bs-target='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
                 | Enabled better ISO C compliance and build mechanisms for the project CKB-next. 
                 a(href='https://github.com/ckb-next/ckb-next/pull/206') [PR206,
                 a(href='https://github.com/ckb-next/ckb-next/pull/221') PR221,
                 a(href='https://github.com/ckb-next/ckb-next/pull/228') PR228]
-                button.accordion-button.btn.btn-link.float-right.collapsed(data-bs-toggle='collapse', data-bs-target='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
             #collapseThree.collapse(aria-labelledby='headingThree', data-parent='#accordion')
               .accordion-body
                 | CKB-next is an open source driver that enables RGB and communication for Corsair keyboard products on
@@ -64,29 +64,29 @@ html(lang='en')
           .accordion-item
             #headingFour.accordion-header
               h5.mb-0
+                button.accordion-button.btn.btn-link.float-right.collapsed(data-bs-toggle='collapse', data-bs-target='#collapseFour', aria-expanded='false', aria-controls='collapseFour')
                 | Aided with packaging both
                 a(href='https://launchpad.net/thunderbird/+topcontributors')  Thunderbird 
                 | and 
                 a(href='https://github.com/mozilla/gecko-dev/commit/e6b8e53803e10244a9735b18062ce5a56ed221e3')  Firefox.
-                button.accordion-button.btn.btn-link.float-right.collapsed(data-bs-toggle='collapse', data-bs-target='#collapseFour', aria-expanded='false', aria-controls='collapseFour')
             #collapseFour.collapse(aria-labelledby='headingFour', data-parent='#accordion')
               .accordion-body
                 | Thunderbird and Firefox are FOSS mail and web clients built by Mozilla.
           .accordion-item
             #headingFive.accordion-header
               h5.mb-0
+                button.accordion-button.btn.btn-link.float-right.collapsed(data-bs-toggle='collapse', data-bs-target='#collapseFive', aria-expanded='false', aria-controls='collapseFive')
                 | Aided with packaging vlc snaps for better compliance. 
                 a(href='https://github.com/videolan/vlc/pull/75') [PR75]
-                button.accordion-button.btn.btn-link.float-right.collapsed(data-bs-toggle='collapse', data-bs-target='#collapseFive', aria-expanded='false', aria-controls='collapseFive')
             #collapseFive.collapse(aria-labelledby='headingFive', data-parent='#accordion')
               .accordion-body
                 | VLC is an open source media program that enables the playback of video and audio.
           .accordion-item
             #headingSix.accordion-header
               h5.mb-0
+                button.accordion-button.btn.btn-link.float-right.collapsed(data-bs-toggle='collapse', data-bs-target='#collapseSix', aria-expanded='false', aria-controls='collapseSix')
                 | Added dark mode to Fedora's SilverBlue website.
                 a(href='https://github.com/fedora-silverblue/silverblue-site/pull/73') [PR73]
-                button.accordion-button.btn.btn-link.float-right.collapsed(data-bs-toggle='collapse', data-bs-target='#collapseSix', aria-expanded='false', aria-controls='collapseSix')
             #collapseSix.collapse(aria-labelledby='headingSix', data-parent='#accordion')
               .accordion-body
                 | Fedora Silverblue is next generation Operating System maintained by RedHat.
@@ -107,9 +107,9 @@ html(lang='en')
           .accordion-item
             #headingEight.accordion-header
               h5.mb-0
+                button.accordion-button.btn.btn-link.float-right.collapsed(data-bs-toggle='collapse', data-bs-target='#collapseEight', aria-expanded='false', aria-controls='collapseEight')
                 | Enabled local DoH HTTP/2 support for DNSCryptProxy
                 a(href='https://github.com/DNSCrypt/dnscrypt-proxy/pull/1384') [PR1384]
-                button.accordion-button.btn.btn-link.float-right.collapsed(data-bs-toggle='collapse', data-bs-target='#collapseEight', aria-expanded='false', aria-controls='collapseEight')
             #collapseEight.collapse(aria-labelledby='headingEight', data-parent='#accordion')
               .accordion-body
                 | DNSCryptProxy is software that fascillitates DNS over HTTPS on Linux and Windows.
