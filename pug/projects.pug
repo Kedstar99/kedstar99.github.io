@@ -132,18 +132,18 @@ html(lang='en')
         p
         .row
           .col
-            #carouselIndicators.carousel.slide(data-ride='carousel')
+            #carouselIndicators.carousel.slide
               .carousel-inner
                 .carousel-item.active
                   img.d-block.w-100(src='/images/hacktoberfest2018.webp', alt='hacktoberfest 2018 picture')
                 .carousel-item
                   img.d-block.w-100(src='/images/hacktoberfest2019.webp', alt='hacktoberfest 2019 picture')
-              a.carousel-control-prev(href='#carouselIndicators', role='button', data-slide='prev')
+              a.carousel-control-prev(data-bs-target='#carouselIndicators', type='button' data-bs-slide='prev')
                 span.carousel-control-prev-icon(aria-hidden='true')
-                span.sr-only Previous
-              a.carousel-control-next(href='#carouselIndicators', role='button', data-slide='next')
+                span.visually-hidden Previous
+              a.carousel-control-next(data-bs-target='#carouselIndicators', type='button' data-bs-slide='next')
                 span.carousel-control-next-icon(aria-hidden='true')
-                span.sr-only Next
+                span.visually-hidden Next
 
     .project-header.mt-5.mx-auto
       .container
