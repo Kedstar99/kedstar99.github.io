@@ -1,5 +1,5 @@
 mixin navbar()
-    nav.navbar.navbar-expand.navbar-dark.bg-dark
+    nav.navbar.navbar-expand.navbar.bg-primary
       .container
         #navbarSupportedContent1.navbar-collapse.collapse.order-1.order-md-0.mx-auto
           a.navbar-brand(href='/')
@@ -12,3 +12,30 @@ mixin navbar()
               i.fab.fa-github.fa-lg
             a.nav-item.nav-link(href='https://www.linkedin.com/in/krish-de-souza-2008a2147/')
               i.fab.fa-linkedin.fa-lg
+            a.nav-item.dropdown
+              button#bd-theme.btn.btn-link.nav-link.py-2.px-0.px-lg-2.dropdown-toggle.d-flex.align-items-center(type='button', aria-expanded='false', data-bs-toggle='dropdown', data-bs-display='static', aria-label='Toggle theme (auto)')
+                svg.bi.my-1.theme-icon-active
+                  use(href='#circle-half')
+              span#bd-theme-text.d-lg-none.ms-2 Toggle theme
+              ul.dropdown-menu.dropdown-menu-end(aria-labelledby='bd-theme-text')
+                li
+                  button.dropdown-item.d-flex.align-items-center(type='button', data-bs-theme-value='light', aria-pressed='false')
+                    svg.bi.me-2.opacity-50.theme-icon
+                      use(href='#sun-fill')
+                    |                   Light
+                    svg.bi.ms-auto.d-none
+                      use(href='#check2')
+                li
+                  button.dropdown-item.d-flex.align-items-center(type='button', data-bs-theme-value='dark', aria-pressed='false')
+                    svg.bi.me-2.opacity-50.theme-icon
+                      use(href='#moon-stars-fill')
+                    |                   Dark
+                    svg.bi.ms-auto.d-none
+                      use(href='#check2')
+                li
+                  button.dropdown-item.d-flex.align-items-center.active(type='button', data-bs-theme-value='auto', aria-pressed='true')
+                    svg.bi.me-2.opacity-50.theme-icon
+                      use(href='#circle-half')
+                    |                   Auto
+                    svg.bi.ms-auto.d-none
+                      use(href='#check2')
