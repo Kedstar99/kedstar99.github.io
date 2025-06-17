@@ -29,5 +29,5 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         # FIXED: Changed branch from master to main
-        branch: main
+        branch: master
         folder: dist
