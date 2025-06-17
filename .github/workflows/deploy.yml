@@ -22,8 +22,8 @@ jobs:
       run: |
         npm install pug-cli -g
         mkdir dist
-        # FIXED: Corrected .pub to .pug
         pug src/index.pug src/projects.pug -o dist
+        cp -r js css images CNAME manifest.json browserconfig.xml dist/
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4
