@@ -1,0 +1,77 @@
+name: Auto-update Bootstrap Dependencies
+
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+  # Runs on a schedule (e.g., every Monday at 08:00 UTC)
+  schedule:
+    - cron: '0 8 * * 1'
+
+jobs:
+  update-bootstrap:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Get latest Bootstrap version from npm
+        id: bootstrap
+        run: echo "latest=$(npm view bootstrap version)" >> $GITHUB_OUTPUT
+
+      - name: Get current Bootstrap version from files
+        id: current_info
+        run: |
+          # Get current version number
+          echo "version=$(grep -oP 'bootstrap@\K[0-9]+\.[0-9]+\.[0-9]+' src/head.pug | head -n 1)" >> $GITHUB_OUTPUT
+          # Get current CSS integrity hash
+          echo "css_sri=$(grep -oP 'sha384-[\w+/=]+' src/head.pug | head -n 1)" >> $GITHUB_OUTPUT
+          # Get current JS integrity hash
+          echo "js_sri=$(grep -oP 'sha384-[\w+/=]+' src/footer.pug | head -n 1)" >> $GITHUB_OUTPUT
+
+      - name: Stop if no new version is found
+        if: steps.bootstrap.outputs.latest == steps.current_info.outputs.version
+        run: echo "✅ Bootstrap is already up to date (v${{ steps.bootstrap.outputs.latest }})."
+
+      - name: Fetch new SRI hashes from jsDelivr API
+        id: new_sri
+        # Only run if there's a new version
+        if: steps.bootstrap.outputs.latest != steps.current_info.outputs.version
+        run: |
+          API_URL="https://data.jsdelivr.com/v1/package/npm/bootstrap@${{ steps.bootstrap.outputs.latest }}/entrypoints"
+          # Use curl to fetch data and jq to parse the JSON response
+          CSS_HASH=$(curl -s $API_URL | jq -r '.css.sri')
+          JS_HASH=$(curl -s $API_URL | jq -r '.js.sri')
+          echo "css_sri=$CSS_HASH" >> $GITHUB_OUTPUT
+          echo "js_sri=$JS_HASH" >> $GITHUB_OUTPUT
+
+      - name: Update files with new version and SRI hashes
+        # Only run if there's a new version
+        if: steps.bootstrap.outputs.latest != steps.current_info.outputs.version
+        run: |
+          echo "✅ New version found: ${{ steps.bootstrap.outputs.latest }}. Updating files..."
+          # Use '|' as the sed delimiter to avoid conflicts with '/' in URLs
+          # Update head.pug (CSS version and SRI hash)
+          sed -i 's|bootstrap@${{ steps.current_info.outputs.version }}|bootstrap@${{ steps.bootstrap.outputs.latest }}|g' src/head.pug
+          sed -i 's|integrity="sha384-${{ steps.current_info.outputs.css_sri }}"|integrity="${{ steps.new_sri.outputs.css_sri }}"|g' src/head.pug
+
+          # Update footer.pug (JS version and SRI hash)
+          sed -i 's|bootstrap@${{ steps.current_info.outputs.version }}|bootstrap@${{ steps.bootstrap.outputs.latest }}|g' src/footer.pug
+          sed -i 's|integrity="sha384-${{ steps.current_info.outputs.js_sri }}"|integrity="${{ steps.new_sri.outputs.js_sri }}"|g' src/footer.pug
+        
+      - name: Create Pull Request
+        # Only run if there's a new version
+        if: steps.bootstrap.outputs.latest != steps.current_info.outputs.version
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "build(deps): Update Bootstrap to v${{ steps.bootstrap.outputs.latest }}"
+          title: "Update Bootstrap to v${{ steps.bootstrap.outputs.latest }}"
+          body: |
+            This is an automated PR to update the Bootstrap CDN links and SRI hashes from **v${{ steps.current_info.outputs.version }}** to the latest version, **v${{ steps.bootstrap.outputs.latest }}**.
+
+            Please review the changes and test the site preview before merging.
+          branch: "bootstrap-update-${{ steps.bootstrap.outputs.latest }}"
+          base: "dev"
+          labels: "dependencies, automated"
