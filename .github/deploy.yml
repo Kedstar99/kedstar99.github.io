@@ -3,7 +3,7 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - dev  # Or your default branch
+      - dev
 
 jobs:
   build-and-deploy:
@@ -16,18 +16,18 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '20' # Specify your desired Node.js version
+        node-version: '20'
 
     - name: Install dependencies and build 🔧
       run: |
         npm install pug-cli -g
         mkdir dist
-        pug src/index.pub  src/projects.pug -o dist
-        # 'src' is the directory with your .pug files
-        # 'dist' is the output directory for the generated .html files
+        # FIXED: Corrected .pub to .pug
+        pug src/index.pug src/projects.pug -o dist
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        branch: master # The branch the action should deploy to.
-        folder: dist # The folder the action should deploy.
+        # FIXED: Changed branch from master to main
+        branch: main
+        folder: dist
