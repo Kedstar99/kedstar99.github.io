@@ -38,7 +38,7 @@ jobs:
         if: steps.bootstrap.outputs.latest == steps.current_info.outputs.version
         run: echo "✅ Bootstrap is already up to date (v${{ steps.bootstrap.outputs.latest }})."
 
-      - name: Fetch new SRI hashes from jsDelivr API
+      - name: Generate new SRI hashes locally
         id: new_sri
         # Only run if there's a new version
         if: steps.bootstrap.outputs.latest != steps.current_info.outputs.version
@@ -46,16 +46,29 @@ jobs:
           BOOTSTRAP_VERSION="${{ steps.bootstrap.outputs.latest }}"
           # Construct URLs for the specific Bootstrap files
           CSS_URL="https://cdn.jsdelivr.net/npm/bootstrap@${BOOTSTRAP_VERSION}/dist/css/bootstrap.min.css"
-          JS_URL="https://cdn.jsdelivr.net/npm/bootstrap@${BOOTSTRAP_VERSION}/dist/js/bootstrap.min.js" # Corrected to bootstrap.min.js
+          JS_URL="https://cdn.jsdelivr.net/npm/bootstrap@${BOOTSTRAP_VERSION}/dist/js/bootstrap.min.js"
 
-          # Fetch CSS SRI using jsDelivr's SRI tool
-          # The output is a JSON object like {"sri":"sha384-..."}
-          CSS_HASH=$(curl -s "https://www.jsdelivr.com/sri?url=${CSS_URL}" | jq -r '.sri')
-          echo "css_sri=$CSS_HASH" >> $GITHUB_OUTPUT
+          echo "Generating new SRI hashes locally for v${BOOTSTRAP_VERSION}..."
 
-          # Fetch JS SRI for bootstrap.min.js using jsDelivr's SRI tool
-          JS_HASH=$(curl -s "https://www.jsdelivr.com/sri?url=${JS_URL}" | jq -r '.sri')
-          echo "js_sri=$JS_HASH" >> $GITHUB_OUTPUT
+          # Fetch CSS content and calculate SHA384 hash
+          CSS_CONTENT=$(curl -s "${CSS_URL}")
+          if [ -z "$CSS_CONTENT" ]; then
+              echo "Error: Could not fetch CSS content from ${CSS_URL}. Aborting."
+              exit 1
+          fi
+          NEW_CSS_SRI="sha384-$(echo -n "${CSS_CONTENT}" | openssl dgst -sha384 -binary | openssl base64 -A)"
+          echo "css_sri=$NEW_CSS_SRI" >> $GITHUB_OUTPUT
+          echo "   Generated CSS SRI: ${NEW_CSS_SRI}"
+
+          # Fetch JS content and calculate SHA384 hash
+          JS_CONTENT=$(curl -s "${JS_URL}")
+          if [ -z "$JS_CONTENT" ]; then
+              echo "Error: Could not fetch JS content from ${JS_URL}. Aborting."
+              exit 1
+          fi
+          NEW_JS_SRI="sha384-$(echo -n "${JS_CONTENT}" | openssl dgst -sha384 -binary | openssl base64 -A)"
+          echo "js_sri=$NEW_JS_SRI" >> $GITHUB_OUTPUT
+          echo "   Generated JS SRI: ${NEW_JS_SRI}"
 
       - name: Update files with new version and SRI hashes
         # Only run if there's a new version
