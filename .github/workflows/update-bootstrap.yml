@@ -27,11 +27,11 @@ jobs:
       - name: Get current Bootstrap version from files
         id: current_info
         run: |
-          # Get current version number
+          # Get current version number from src/head.pug
           echo "version=$(grep -oP 'bootstrap@\K[0-9]+\.[0-9]+\.[0-9]+' src/head.pug | head -n 1)" >> $GITHUB_OUTPUT
-          # Get current CSS integrity hash
+          # Get current CSS integrity hash from src/head.pug (e.g., sha384-...)
           echo "css_sri=$(grep -oP 'sha384-[\w+/=]+' src/head.pug | head -n 1)" >> $GITHUB_OUTPUT
-          # Get current JS integrity hash
+          # Get current JS integrity hash from src/footer.pug (e.g., sha384-...)
           echo "js_sri=$(grep -oP 'sha384-[\w+/=]+' src/footer.pug | head -n 1)" >> $GITHUB_OUTPUT
 
       - name: Stop if no new version is found
@@ -43,11 +43,18 @@ jobs:
         # Only run if there's a new version
         if: steps.bootstrap.outputs.latest != steps.current_info.outputs.version
         run: |
-          API_URL="https://data.jsdelivr.com/v1/package/npm/bootstrap@${{ steps.bootstrap.outputs.latest }}/entrypoints"
-          # Use curl to fetch data and jq to parse the JSON response
-          CSS_HASH=$(curl -s $API_URL | jq -r '.css.sri')
-          JS_HASH=$(curl -s $API_URL | jq -r '.js.sri')
+          BOOTSTRAP_VERSION="${{ steps.bootstrap.outputs.latest }}"
+          # Construct URLs for the specific Bootstrap files
+          CSS_URL="https://cdn.jsdelivr.net/npm/bootstrap@${BOOTSTRAP_VERSION}/dist/css/bootstrap.min.css"
+          JS_URL="https://cdn.jsdelivr.net/npm/bootstrap@${BOOTSTRAP_VERSION}/dist/js/bootstrap.min.js" # Corrected to bootstrap.min.js
+
+          # Fetch CSS SRI using jsDelivr's SRI tool
+          # The output is a JSON object like {"sri":"sha384-..."}
+          CSS_HASH=$(curl -s "https://www.jsdelivr.com/sri?url=${CSS_URL}" | jq -r '.sri')
           echo "css_sri=$CSS_HASH" >> $GITHUB_OUTPUT
+
+          # Fetch JS SRI for bootstrap.min.js using jsDelivr's SRI tool
+          JS_HASH=$(curl -s "https://www.jsdelivr.com/sri?url=${JS_URL}" | jq -r '.sri')
           echo "js_sri=$JS_HASH" >> $GITHUB_OUTPUT
 
       - name: Update files with new version and SRI hashes
@@ -57,12 +64,14 @@ jobs:
           echo "✅ New version found: ${{ steps.bootstrap.outputs.latest }}. Updating files..."
           # Use '|' as the sed delimiter to avoid conflicts with '/' in URLs
           # Update head.pug (CSS version and SRI hash)
+          # The current_info.outputs.css_sri already contains "sha384-"
           sed -i 's|bootstrap@${{ steps.current_info.outputs.version }}|bootstrap@${{ steps.bootstrap.outputs.latest }}|g' src/head.pug
-          sed -i 's|integrity="sha384-${{ steps.current_info.outputs.css_sri }}"|integrity="${{ steps.new_sri.outputs.css_sri }}"|g' src/head.pug
+          sed -i 's|integrity="${{ steps.current_info.outputs.css_sri }}"|integrity="${{ steps.new_sri.outputs.css_sri }}"|g' src/head.pug
 
           # Update footer.pug (JS version and SRI hash)
+          # The current_info.outputs.js_sri already contains "sha384-"
           sed -i 's|bootstrap@${{ steps.current_info.outputs.version }}|bootstrap@${{ steps.bootstrap.outputs.latest }}|g' src/footer.pug
-          sed -i 's|integrity="sha384-${{ steps.current_info.outputs.js_sri }}"|integrity="${{ steps.new_sri.outputs.js_sri }}"|g' src/footer.pug
+          sed -i 's|integrity="${{ steps.current_info.outputs.js_sri }}"|integrity="${{ steps.new_sri.outputs.js_sri }}"|g' src/footer.pug
         
       - name: Create Pull Request
         # Only run if there's a new version
