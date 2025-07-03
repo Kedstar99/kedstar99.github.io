@@ -10,7 +10,7 @@ on:
 
   # Runs on a schedule (e.g., every Monday at 08:00 UTC)
   schedule:
-    - cron: '0 8 * * 1'
+    - cron: '0 8 * * *'
 
 jobs:
   update-bootstrap:
