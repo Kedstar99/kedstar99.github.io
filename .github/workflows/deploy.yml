@@ -22,7 +22,7 @@ jobs:
       run: |
         npm install pug-cli -g
         mkdir dist
-	mkdir disr/.github
+	      mkdir dist/.github
         pug src/index.pug src/projects.pug -o dist
         cp -r js css images CNAME manifest.json browserconfig.xml dist/
         cp .github/update-bootstrap.yml dist/.github/update-bootstrap.yml
