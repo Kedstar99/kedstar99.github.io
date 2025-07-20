@@ -21,11 +21,10 @@ jobs:
     - name: Install dependencies and build 🔧
       run: |
         npm install pug-cli -g
-        mkdir dist
-	      mkdir dist/.github
+        mkdir -p dist/.github/workflows
         pug src/index.pug src/projects.pug -o dist
         cp -r js css images CNAME manifest.json browserconfig.xml dist/
-        cp .github/update-bootstrap.yml dist/.github/update-bootstrap.yml
+        cp .github/workflows/update-bootstrap.yml dist/.github/workflows/update-bootstrap.yml
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4
