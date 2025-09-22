@@ -18,7 +18,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Get latest Bootstrap version from npm
         id: bootstrap
@@ -89,7 +89,7 @@ jobs:
       - name: Create Pull Request
         # Only run if there's a new version
         if: steps.bootstrap.outputs.latest != steps.current_info.outputs.version
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "build(deps): Update Bootstrap to v${{ steps.bootstrap.outputs.latest }}"
